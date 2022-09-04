@@ -1,0 +1,410 @@
+// レスポンシブ
+@import "../mixin/responsive";
+
+// ハンバーガーメニュー
+@import "../effect/hamburger-menu";
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 15vw;
+    background-color: rgba(255, 255, 255, 1);
+    // background-color: rgba(255, 255, 255, 0.5);
+    z-index: 200;
+    transition: 0.5s;
+    transition: all 0.5s;
+
+    &.change {
+        // background: rgba(0, 0, 0, 0.5);
+        // background: rgb(162 207 237 / 90%);
+
+        background: $btn-color;
+        // background: #568baec1;
+    }
+
+    @include tb {
+        height: 48px;
+    }
+
+    .header-container {
+        height: 15vw;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include width-sp;
+
+        @include tb {
+            @include width-pc;
+            max-width: 1000px;
+            height: 48px;
+        }
+
+        .header-logo {
+            // width: 40vw;
+            flex-basis: 40vw;
+
+            height: 12vw;
+            background: url(../../img/icon-logo.png) center center/cover no-repeat;
+            position: relative;
+            z-index: 100;
+            transition: 0.5s;
+            filter: invert(0%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(70%) contrast(300%);
+
+            &.change {
+                filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(107%) contrast(300%);
+            }
+
+            @include tb {
+                // width: 180px;
+                flex-basis: 130px;
+                height: 45px;
+            }
+
+            a {
+                display: block;
+                // width: 100%;
+                height: 60px;
+                text-indent: -9999px;
+
+                @include pc {
+                    width: 130px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .pc-nav {
+            display: none;
+
+            @include tb {
+                display: block;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        a {
+                            display: block;
+                            padding: 8px 20px;
+                            font-size: 1.3rem;
+                            color: #000;
+
+                            &.change {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ハンバーガーメニュー
+.sp-nav {
+    display: block;
+
+    @include tb {
+        display: none;
+    }
+}
+
+.sp-nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    // background-color: rgba(255, 255, 255, 0.95);
+    background-color: #568baef5;
+    // background: rgb(162 207 237 / 95%);
+    // background: rgba(0, 0, 0, 0.9);
+
+
+    transition: all 0.3s;
+    transform: translate(100%);
+    z-index: 1000;
+
+    ul {
+        padding: 100px 10%;
+
+        @include tb {
+            padding-top: 120px;
+        }
+
+        li {
+            font-size: 1.4rem;
+            letter-spacing: 1em;
+            margin-bottom: 24px;
+
+            a {
+                padding: 16px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.sp-nav-menu.open {
+    transform: translate(0);
+}
+
+
+// fv-image---------------------------/
+// home page トップページ
+.home.page-id-39 {
+    .fv {
+        // min-width: 300px;
+        filter: brightness(110%);
+        height: 100vh;
+        position: relative;
+        z-index: -100;
+
+        img {
+            height: 100vh;
+        }
+
+        @include tb {
+            height: 90vh;
+
+            img {
+                height: 100vh;
+            }
+        }
+    }
+}
+
+
+// movie
+.single,
+.archive,
+.page {
+    .fv {
+        // min-width: 300px;
+        filter: brightness(100%);
+        height: 50vh;
+        position: relative;
+        z-index: -100;
+
+        // @include tb {
+        //     height: 50vh;
+        // }
+
+        img {
+            height: 50vh;
+
+        }
+
+        // @include tb {
+        //     height: 100vh;
+        // }
+
+    }
+}
+
+.fv img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+// タイトル------------------------------/
+// fvロゴ-------------------------------/
+
+//home page トップページ
+.home.page {
+    .fv-title {
+        position: absolute;
+        top: -8vh;
+        right: 60px;
+        left: -40px;
+        max-width: 400px;
+        margin: 0 auto;
+
+        @include tb {
+            display: none;
+        }
+
+        img {
+            width: 80%;
+            object-fit: contain;
+        }
+    }
+
+    .fv-title-pc {
+        display: none;
+
+        @include tb {
+            display: block;
+            position: absolute;
+            top: -8vh;
+            right: 0;
+            left: -40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 30%;
+            object-fit: contain;
+            position: absolute;
+            left: -24px;
+        }
+    }
+}
+
+
+//single page logo
+//movie
+.single,
+.archive,
+.page {
+    .fv-title {
+        position: absolute;
+        top: 30vh;
+        right: 60px;
+        left: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        font-size: $title-sp;
+
+        @include tb {
+            display: none;
+        }
+
+        img {
+            width: 80%;
+            object-fit: contain;
+        }
+    }
+
+    .fv-title-pc {
+        display: none;
+
+        @include tb {
+            display: block;
+            position: absolute;
+            top: 32vh;
+            right: 0;
+            left: 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: $title-pc;
+            left: 0;
+            padding-left: 20px;
+        }
+
+        img {
+            width: 30%;
+            object-fit: contain;
+            position: absolute;
+            left: -28px;
+        }
+    }
+}
+
+
+.archive,
+//logo
+.page {
+    .fv-title {
+        top: 0;
+        left: -30px;
+    }
+
+    .fv-title-pc {
+        top: 0;
+        left: -30px;
+    }
+}
+
+.page-child {
+
+    .fv-title,
+    .fv-title-pc {
+        top: 32vh;
+        left: 0;
+        padding-left: 20px;
+    }
+}
+
+.single-movie,
+.single-live,
+.page-child {
+
+    .fv-title,
+    .fv-title-pc {
+        color: #fff;
+    }
+}
+
+.single-blog {
+    .fv {
+        overflow: hidden;
+
+        img {
+            filter: blur(4px);
+        }
+    }
+
+    .fv-title,
+    .fv-title-pc {
+        color: #fff;
+    }
+}
+
+
+//アーカイブページロゴ
+.category-news {
+    .fv-title img,
+    .fv-title-pc img {
+    
+        filter: invert(88%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(7%) contrast(20%);
+    }
+}
+
+/*==================================================
+　5-3-3 左から右に線が伸びる（下部）
+===================================*/
+.pc-nav ul li a {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+
+    &.change::after { //スクロール時
+        background: #fff;
+    }
+}
+
+.pc-nav ul li a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 6px;
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: 2px;
+    background: #444;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 0.5);
+    /*X方向0、Y方向1*/
+    transform-origin: left top;
+    /*左上基点*/
+}
+
+/*現在地とhoverの設定*/
+.pc-nav ul li.current a::after,
+.pc-nav ul li a:hover::after {
+    transform: scale(1, 0.5);
+    /*X方向にスケール拡大*/
+}

@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+
+.tax-genre {
+    .movie-contain {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #fff;
+
+        @include tb {
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            @include tb {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        h2 {
+            font-size: $title-sp;
+            padding-bottom: 12px;
+        }
+
+        .movie-list {
+            @include tb {
+                width: 720px;
+                margin-left: 20px;
+            }
+        }
+
+        ul {
+            @include tb {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            li {
+                @include tb {
+                    // width: 48%;
+                }
+            }
+        }
+
+        .movie-box {
+            display: block;
+            margin-bottom: 40px;
+            width: 100%;
+
+            @include tb {
+                margin-bottom: 32px;
+                width: 48%;
+            }
+
+            //再生ボタン---------------------------//
+            .play-wrapper {
+                padding-top: 80px;
+            }
+
+            .movie-title {
+                margin-left: 26px;
+                // padding-top: 56px;
+                color: #fff;
+                text-align: center;
+
+                @include tb {
+                    margin-left: 3%;
+                    padding-top: 0;
+                    // color: #fff;
+                    // text-align: center;
+                }
+            }
+        }
+        //--------------------------------------//
+
+        .movie-content {
+            margin: 0 calc(50% - 50vw);
+            height: 240px;
+
+            @include tb {
+                margin: 0;
+            }
+        }
+    }
+
+    small {
+        padding-top: 0;
+        height: 0;
+    }
+}
+
+
+

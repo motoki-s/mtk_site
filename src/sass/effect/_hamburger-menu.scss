@@ -1,0 +1,107 @@
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+.openbtn {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    z-index: 1100;
+}
+
+/*ボタン内側*/
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    /*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: #444;
+    width: 45%;
+
+    &.change {
+        background: #fff;
+    }
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+    /*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+
+
+
+
+/*========= テキストを滑らかに出現させるためのCSS ===============*/
+
+// .sp-nav-menu ul li
+
+
+
+// .sp-nav-menu ul li {
+//     overflow: hidden;
+//     display: block;
+// }
+
+// /* アニメーションで傾斜がついている文字列を水平に戻す*/
+// .sp-nav-menu ul li a {
+//     transition: .8s ease-in-out;
+//     transform: translate3d(0, 100%, 0) skewY(12deg);
+//     transform-origin: left;
+//     display: block;
+// }
+
+// .sp-nav-menu ul li a.smoothTextAppear {
+//     transform: translate3d(0, 0, 0) skewY(0);
+// }
+
+
+
+// span.smoothText {
+//     overflow: hidden;
+//     display: block;
+// }
+
+// /* アニメーションで傾斜がついている文字列を水平に戻す*/
+// span.smoothTextTrigger {
+//     transition: .8s ease-in-out;
+//     transform: translate3d(0, 100%, 0) skewY(12deg);
+//     transform-origin: left;
+//     display: block;
+// }
+
+// span.smoothTextTrigger.smoothTextAppear {
+//     transform: translate3d(0, 0, 0) skewY(0);
+// }

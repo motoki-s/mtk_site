@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+
+//ページネーション
+// .navigation {
+//     max-width: 800px;
+//     width: 90%;
+//     margin: 0 auto;
+
+
+//     .page-numbers {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         .current {
+//             // color: rgb(219, 33, 33);
+//             border: 1px solid #444;
+//             // padding: 6px 16px;
+//             width: 32px;
+//             height: 32px;
+//             padding-left: 3px;
+//             border-radius: 50%;
+//         }
+
+//         li {
+//             width: 32px;
+//         }
+
+//         .prev.page-numbers {
+//             position: absolute;
+//             left: 20px;
+//             display: block;
+//             margin-top: -12px;
+
+//             @include tb {
+//                 left: 100px;
+//             }
+//         }
+
+//         .next.page-numbers {
+//             position: absolute;
+//             right: 20px;
+//             display: block;
+//             margin-top: -12px;
+
+//             @include tb {
+//                 right: 100px;
+//             }
+//         }
+//     }
+// }

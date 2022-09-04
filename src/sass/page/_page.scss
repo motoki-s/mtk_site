@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+
+.youtube {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 40px;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.page-child {
+    .container {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        @include tb {
+            padding-top: 80px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            padding-bottom: 16px;
+            
+            @include tb {
+                font-size: 2.4rem;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+//ライブページ
+.page-id-78 {
+    small {
+        padding-top: 0;
+        height: 0;
+    }
+}

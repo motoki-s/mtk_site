@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+
+.page-id-228 {
+    .profile-contain {
+
+        padding-bottom: 120px;
+        
+        .container {
+            padding-top: 40px;
+        }
+
+        h2 {
+            font-size: $title-sp;
+            padding-bottom: 20px;
+
+            @include tb {
+                font-size: 4rem;
+            }
+        }
+
+        .profile-inner {
+            @include tb {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+            }
+
+            .profile-image {
+                padding-bottom: 32px;
+
+                @include tb {
+                    width: 40%;
+                }
+            }
+
+            .profile-text {
+                h3 {
+                    font-size: 1.8rem;
+                    padding-bottom: 16px;
+
+                    @include tb {
+                        font-size: 2rem;
+                    }
+                }
+
+                @include tb {
+                    width: 55%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+
+.page-id-241 {
+    .reservation-contain {
+        .container {
+            padding-top: 40px;
+        }
+
+        h2 {
+            font-size: $title-sp;
+            padding-bottom: 20px;
+
+            @include tb {
+                font-size: 4rem;
+            }
+        }
+
+        .live-date {
+            @include tb {
+                font-size: 1.6rem;
+            }
+        }
+
+        h3 {
+            font-size: 1.6rem;
+
+            @include tb {
+                font-size: 2.4rem;
+            }
+        }
+
+        .contact-form {
+            table {
+                width: 100%;
+            }
+
+            th,
+            td {
+                display: block;
+            }
+
+            th {
+                text-align: left;
+                font-size: 1.6rem;
+
+                &::after {
+                    content: '*';
+                    display: inline-block;
+                    color: red;
+                }
+            }
+
+            tr:last-of-type,
+            tr:nth-child(1),
+            tr:nth-child(2) {
+                th::after {
+                    display: none;
+                }
+            }
+
+            input,
+            select,
+            textarea {
+                border: 1px solid #D6D6D6;
+                padding: 12px 8px;
+                border-radius: 3px;
+                margin-bottom: 40px;
+                outline: 0;
+            }
+
+            input[type="text"] {
+                width: 100%;
+
+                @include tb {
+                    width: 50%;
+                }
+            }
+
+            input[type="text"]::placeholder,
+            input[type="email"]::placeholder {
+                color: rgb(216, 216, 216);
+            }
+
+            input[name="your-email"],
+            textarea {
+                width: 100%;
+                resize: none;
+            }
+
+            select[name="your-subject"] {
+                width: 100%;
+
+                @include tb {
+                    width: 32%;
+                }
+            }
+            
+            input[type="submit"] {
+                @include btnBase;
+
+                @include tb {
+                    width: 40%;
+                }
+            }
+
+            .submit {
+                text-align: center;
+            }
+        }
+    }
+
+    small {
+        padding-top: 0;
+        height: 0;
+    }
+
+
+}
+
+//エラー文
+.wpcf7-not-valid-tip {
+    margin-top: -36px;
+    margin-bottom: 24px;
+}

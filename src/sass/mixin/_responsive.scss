@@ -1,0 +1,36 @@
+// sp
+@mixin width-sp {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+// tb
+@mixin width-tb {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+// pc
+@mixin width-pc {
+    max-width: 950px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+// ブレイクポイント---------
+// pcとtbの幅を定義
+$pc: 960px;
+$tb: 768px;
+
+// min-widthを指定
+@mixin pc {
+    @media (min-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin tb {
+    @media (min-width: ($tb)) {
+        @content;
+    }
+}

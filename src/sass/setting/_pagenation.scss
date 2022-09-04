@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+
+.navigation {
+    margin: 0 auto;
+    position: relative;
+
+    @include tb {
+        max-width: 1020px;
+    }
+
+    .page-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .current {
+            border: 1px solid #444;
+            width: 32px;
+            height: 32px;
+            padding-left: 3px;
+            border-radius: 50%;
+        }
+
+        li {
+            width: 32px;
+        }
+
+        .prev.page-numbers {
+            color: #fff;
+            position: absolute;
+            left: 30px;
+            margin-top: -28px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                transform: skew(-45deg);
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    left: 12px;
+                }
+            }
+        }
+
+        .next.page-numbers {
+            color: #fff;
+            position: absolute;
+            right: 30px;
+            margin-top: -28px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: skew(45deg);
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    right: 12px;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+
+// ページネーション固定ページ
+
+.page,
+.single-blog {
+
+    .pagenation {
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+
+        @include tb {
+            max-width: 1020px;
+        }
+
+
+        .next.page-numbers {
+            color: #fff;
+            position: absolute;
+            right: 30px;
+            margin-top: -4px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: skew(45deg);
+                right: 0;
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    right: 12px;
+                }
+            }
+        }
+
+        .prev.page-numbers {
+            color: #fff;
+            position: absolute;
+            left: 30px;
+            margin-top: -4px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                transform: skew(-45deg);
+                left: 0;
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    left: 12px;
+                }
+            }
+        }
+
+        .page-numbers {
+            margin: 0 2px;
+        }
+    }
+
+    .current {
+        display: inline-block;
+        border: 1px solid #444;
+        width: 32px;
+        height: 32px;
+        padding-left: 3px;
+        border-radius: 50%;
+    }
+
+
+    // カスタム投稿ページ
+    .wp-pagenavi {
+        .nextpostslink {
+            position: absolute;
+            right: 30px;
+            color: rgba(255, 255, 255, 0);
+            width: 80px;
+            top: -4px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-right: 1px solid #000;
+                transform: skew(45deg);
+                right: 0;
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    right: 12px;
+                }
+            }
+        }
+
+        .previouspostslink {
+            position: absolute;
+            left: 30px;
+            color: #fff;
+            width: 80px;
+            top: -4px;
+            transition: all .3s;
+            padding: 12px 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 8px;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
+                transform: skew(-45deg);
+                left: 0;
+
+                @include tb {
+                    width: 54px;
+                }
+            }
+
+            @include tb {
+                &:hover {
+                    left: 12px;
+                }
+            }
+        }
+
+        .pages {
+            display: none;
+        }
+
+        .page {
+            width: 32px;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+//戻るーーーーーーーーーーーーーーーーーーーーーーー
+.single,
+.single-live,
+.page {
+
+    .more-btn {
+        // display: inline-block;
+        // margin-top: 40px;
+        // position: relative;
+        // left: 20px;
+
+
+        color: #fff;
+        position: absolute;
+        left: 30px;
+        margin-top: -12px;
+        // padding: 12px 28px;
+        transition: all .3s;
+        padding: 12px 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 8px;
+            left: 0;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
+            transform: skew(-45deg);
+
+            @include tb {
+                width: 54px;
+                }
+        }
+
+        @include tb {
+            &:hover {
+                left: 12px;
+            }
+
+        }
+
+    }
+}
+
+.single-post {
+    .more-btn {
+        &::after {
+            top: 56px;
+        }
+    }
+}
+
+.single-live {
+    .more-btn {
+        margin-top: 20px;
+    }
+}

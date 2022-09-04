@@ -1,0 +1,40 @@
+// font-family
+$font-famity: YuGothic, 'Yu Gothic', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+
+// bese-font-size
+$font-sp: 1.4rem;
+$font-pc: 1.5rem;
+
+
+// title-size
+$title-sp: 2.2rem;
+$title-pc: 5.6rem;
+
+//リンクカラー
+$btn-color: #568BAE;
+
+
+
+//ボタンベース
+@mixin btnBase($w: 100%, $pd: 20px 12px, $bg_c: #568BAE, $tx_c: #fff) {
+    width: $w;
+    padding: $pd;
+    background-color: $bg_c;
+    color: $tx_c;
+    line-height: 1;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s;
+
+
+    @include tb {
+        &:hover {
+            opacity: 0.8;
+        }
+
+    }
+}
+

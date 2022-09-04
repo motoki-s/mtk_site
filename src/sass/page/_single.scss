@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+
+.archive {
+    small {
+        padding-top: 0;
+        height: 0;
+    }
+}
+
+.single {
+    .top-news {
+        line-height: 1.6;
+        padding-bottom: 120px;
+        
+        // @include tb {
+        //     padding-bottom: 120px;
+
+        // }
+
+        a {
+            color: #8DACC5;
+        }
+
+        @include tb {
+            padding-top: 8px;
+        }
+
+        span {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+//single-live-----------------------------------/
+.single-live {
+    .live-content {
+        padding-top: 40px;
+        padding-bottom: 80px;
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+
+            @include tb {
+                font-size: 2.4rem;
+                margin-bottom: 32px;
+            }
+        }
+
+        .live-wrapper {
+            margin-bottom: 40px;
+
+            @include tb {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .live-place {
+                @include tb {
+                    width: 40%;
+                }
+
+                a {
+                    color: #8DACC5;
+                }
+            }
+
+            .live-access {
+                @include tb {
+                    width: 54%;
+                }
+            }
+        }
+
+        .live-place {
+            margin-bottom: 20px;
+        }
+
+        .live-access {
+            h3 {
+                font-size: 1.6rem;
+
+                @include tb {
+                    font-size: 2rem;
+                }
+            }
+
+            .livehouse-info,
+            .ticket-info {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .reserve-btn a {
+        display: block;
+        margin-bottom: 40px;
+        @include btnBase;
+
+        @include tb {
+            width: 50%;
+        }
+    }
+
+    .sns-navi {
+        position: static;
+        padding-left: 0;
+        margin-top: -80px;
+    }
+
+
+}
+
+
+//single blog--------------------------------/
+.single-blog {
+    .blog-content {
+        padding-top: 40px;
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+
+            @include tb {
+                font-size: 2.4rem;
+                margin-bottom: 32px;
+            }
+        }
+
+        .blog-inner {
+            a {
+                color: #8DACC5;
+            }
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 5px solid #EAEAEA;
+            border-bottom: 5px solid #EAEAEA;
+            margin: 80px 0 40px;
+            padding: 32px 0;
+
+            @include tb {
+                max-width: 640px;
+                margin: 120px auto 80px;
+                // margin-top: 200px;
+            }
+
+            .profile-image {
+                flex-basis: 30vw;
+
+                @include tb {
+                    flex-basis: 60vw;
+                }
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .profile-text {
+                // width: 300px;
+                flex-basis: 90vw;
+                margin-left: 16px;
+
+                @include tb {
+                    flex-basis: 170vw;
+                    margin-left: 40px;
+                }
+
+                .name-en {
+                    display: none;
+
+                    @include tb {
+                        display: inline-block;
+                    }
+                }
+
+                h3 {
+                    font-weight: bold;
+
+                    @include tb {
+                        font-size: 2rem;
+                    }
+                }
+
+                p {
+                    @include tb {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .profile-link a {
+                    text-decoration: underline;
+                    color: #8DACC5;
+
+                    @include tb {
+                        &:hover {
+                            transition: all 0.2s;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // blog 関連記事
+    .rel-article {
+        padding-top: 80px;
+        padding-bottom: 64px;
+        // min-width: 300px;
+
+        @include tb {
+            padding-top: 80px;
+            padding-bottom: 120px;
+            @include width-pc;
+        }
+
+        h5 {
+            font-size: $title-sp;
+            margin-left: 5%;
+
+            @include tb {
+                margin-left: 0;
+            padding-bottom: 24px;
+
+            }
+        }
+
+        .blog-slider {
+            z-index: 100;
+
+            @include tb {
+                display: none;
+            }
+
+            li {
+                background-color: #fff;
+                box-shadow: 0 0 10px #ccc;
+                margin-bottom: 20px;
+                padding: 12px;
+
+                .blog-text {
+                    span {
+                        text-align: left;
+                    }
+
+                    h3 {
+                        font-size: 1.8rem;
+                        margin-top: -5px;
+                        margin-bottom: 8px;
+                        line-height: 1.6;
+
+                    }
+                }
+            }
+        }
+
+        .blog-list {
+            display: none;
+
+            @include tb {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            li {
+                @include tb {
+                    width: 31%;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px #ccc;
+                    margin-bottom: 20px;
+                    padding: 12px;
+
+                    &:hover {
+                        transition: all 0.2s;
+                        opacity: 0.8;
+                    }
+                }
+
+                .blog-text {
+                    span {
+                        text-align: left;
+                        font-size: 1rem;
+                    }
+
+                    h3 {
+                        font-weight: bold;
+                        line-height: 1.6;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+
+        span {
+            display: block;
+            text-align: right;
+            margin-right: 40px;
+
+            @include tb {
+                margin-right: 0px;
+                &:hover {
+                    transition: all 0.2s;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

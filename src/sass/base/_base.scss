@@ -1,0 +1,105 @@
+// レスポンシブ
+@import "../mixin/responsive";
+
+/* base */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $font-sp;
+    font-family: $font-famity;
+    letter-spacing: .2em;
+    line-height: 2;
+    font-feature-settings: "palt";
+    color: #444;
+    overflow-wrap: break-word;
+
+    @include pc {
+        font-size: $font-pc;
+    }
+}
+
+img {
+    vertical-align: bottom;
+    width: auto;
+    height: auto;
+    width: 100%;
+    // height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+.container {
+    @include width-sp;
+
+    @include tb {
+        @include width-pc;
+    }
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+
+
+
+
+//投稿記事
+/*画像の中央寄せ*/
+.aligncenter {
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/*figureタグで囲まれた画像の中央寄せ*/
+.aligncenter img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*画像右寄せ*/
+.alignright {
+    height: auto;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+/*figureタグで囲まれた画像右寄せ*/
+.alignright img {
+    height: auto;
+    max-width: 100%;
+}
+
+/*位置指定のない画像*/
+.alignnone {
+    height: auto;
+    max-width: 100%;
+}
+
+/*figureタグで囲まれた位置指定のない画像*/
+.alignnone img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+
+//画像とテキストの余白
+.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    padding: 0;
+}
+.wp-block-media-text__media {
+    @media (min-width: 601px) {
+        padding: 0 8%;
+    }
+}

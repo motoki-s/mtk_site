@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// 変数
+@import "setting/config";
+
+
+// 共通
+@import "base/reset";
+@import "base/base";
+
+//アニメーション
+@import "effect/animate";
+
+// ヘッダー
+@import "module/header";
+@import "module/footer";
+
+
+//front-page
+@import "page/front-page";
+
+@import "page/page-movie";
+
+@import "page/single";
+@import "page/page";
+@import "page/page-blog";
+@import "page/page-profile";
+@import "page/page-contact";
+@import "page/page-reservation";
+@import "page/taxonomy";
+
+//ページネーション archive
+// @import "page/archive";
+@import "setting/pagenation";
+
+

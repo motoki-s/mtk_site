@@ -1,0 +1,529 @@
+@charset "UTF-8";
+
+// 変数
+@import "../setting/config";
+
+// レスポンシブ
+@import "../mixin/responsive";
+
+// スライド
+@import "../effect/slick";
+
+
+// banner--------------------------------------------------//
+.banner {
+    padding-top: 24px;
+    z-index: 100;
+    background-color: #fff;
+    // min-width: 300px;
+
+    @include pc {
+        display: none;
+    }
+
+    .banner-image {
+        margin: 0 8px;
+    }
+}
+
+.banner-list {
+    display: none;
+
+    .banner-image {
+        margin: 0 20px;
+    }
+
+    @include pc {
+        display: block;
+        padding-top: 24px;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+        background-color: #fff;
+        margin: 0 calc(50% - 50vw);
+    }
+}
+
+// news--------------------------------------------------//
+.top-news {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    margin: 0 calc(50% - 50vw);
+
+    @include tb {
+        // padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .news-contain {
+        @include tb {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    h2 {
+        font-size: $title-sp;
+        padding-bottom: 12px;
+
+        @include tb {
+            padding-top: 32px;
+        }
+    }
+
+    ul {
+        // border-top: dashed 1px #ccc;
+        margin-bottom: 48px;
+
+        @include tb {
+            width: 75%;
+        }
+
+        a {
+            display: block;
+            padding: 24px 0;
+            border-bottom: dashed 1px #ccc;
+
+            @include tb {
+                padding: 40px 0;
+            }
+
+            @include tb {
+                &:hover {
+                    transition: all 0.1s;
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+        li {
+            @include tb {
+                display: flex;
+            }
+
+            .daytime {
+                margin-bottom: 8px;
+                font-weight: bold;
+
+                @include tb {
+                    margin-bottom: 0;
+                }
+            }
+
+            .news-info {
+                @include tb {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    span {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 128px;
+        margin-left: auto;
+
+        a {
+            padding: 24px 12px;
+            display: inline-block;
+            // text-align: right;
+            transition: all 0.1s;
+
+            @include tb {
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+// movie--------------------------------------------------//
+.movie {
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    @include tb {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        @include width-pc;
+    }
+
+    h2 {
+        font-size: $title-sp;
+        padding-bottom: 12px;
+        margin-left: 5%;
+
+        @include tb {
+            margin-left: 0;
+        }
+    }
+
+    .movie-contain {
+        @include tb {
+            display: flex;
+            margin: 0 calc(50% - 50vw);
+        }
+
+        .sp-list {
+            @include tb {
+                display: none;
+            }
+        }
+
+        .pc-list {
+            display: block;
+            z-index: 100;
+        }
+    }
+
+    .movie-content {
+        display: block;
+        margin-bottom: 75px;
+        height: 180px;
+
+        @include tb {
+            margin: 0 16px 0px;
+            height: 350px;
+        }
+
+        .movie-title {
+            margin-left: 26px;
+            padding-top: 56px;
+
+            @include tb {
+                margin-left: 3%;
+                // padding-top: 360px;
+                padding-top: 16px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    span {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 128px;
+        margin-left: auto;
+
+        a {
+            padding: 24px 12px;
+            display: inline-block;
+            // text-align: right;
+            transition: all 0.1s;
+
+            @include tb {
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+
+.movie-content {
+    transition-duration: 0.5s;
+
+    @include tb {
+        &:hover {
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            transform: translateY(-10px);
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+
+//再生ボタン--------------------------------------------------//
+.play-wrapper {
+    text-align: center;
+    padding-top: 50px;
+
+    @include tb {
+        padding-top: 120px;
+    }
+
+    .play-btn {
+        padding: 23px 23px;
+        width: 72px;
+        height: 72px;
+        -webkit-transition: all .3s 0s ease;
+        transition: all .3s 0s ease;
+
+        display: inline-block;
+        border: 1px solid #fff;
+        border-radius: 50%;
+
+        span {
+            display: block;
+            border: 12px solid transparent;
+            border-left: 20px solid currentColor;
+            color: #fff;
+            margin-left: 4px;
+        }
+    }
+}
+
+//-------------------------------------------------//
+
+
+
+
+
+/* 背景固定 */
+//--------------------------------------------------//
+.bg-fix-img::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -200;
+    width: 100%;
+    height: 100vh;
+    background: url(../../img/bg-top-page.jpg) center center / cover no-repeat;
+    filter: blur(5px)brightness(120%);
+
+    @include tb {
+        width: 55%;
+    }
+}
+
+// live--------------------------------------------------//
+.live {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    // min-width: 300px;
+
+    @include tb {
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+
+    .live-contain {
+
+        @include tb {
+            display: flex;
+            justify-content: space-between;
+            @include width-pc;
+        }
+
+        h2 {
+            font-size: $title-sp;
+            padding-bottom: 12px;
+        }
+
+        ul {
+            // border-top: dashed 1px #ccc;
+
+            @include tb {
+                width: 75%;
+            }
+
+            li {
+                padding: 20px 0;
+                border-bottom: dashed 1px #ccc;
+
+                @include tb {
+                    &:hover {
+                        transition: all 0.1s;
+                        opacity: 0.8;
+                    }
+                }
+
+                .live-date {
+                    font-weight: bold;
+                    margin-bottom: 8px;
+
+                    @include tb {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .live-content {
+                    display: flex;
+
+                    .live-image {
+                        padding-top: 80px;
+                        flex-basis: 26vw;
+
+                        @include tb {
+                            width: 230px;
+                            padding-top: 120px;
+                        }
+                    }
+
+                    .live-text {
+                        margin-top: -8px;
+                        flex-basis: 60vw;
+                        margin-left: 16px;
+                        line-height: 1.6;
+
+                        @include tb {
+                            margin-left: 32px;
+                        }
+
+                        h3 {
+                            // font-size: 1.8rem;
+                            margin-bottom: 8px;
+
+                            @include tb {
+                                font-size: 1.8rem;
+                                margin-bottom: 8px;
+                            }
+                        }
+
+                        .live-place {
+                            font-size: 1.2rem;
+                            letter-spacing: .1em;
+                            margin-bottom: 8px;
+
+                            @include tb {
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        .live-time {
+                            font-size: 1.2rem;
+                            letter-spacing: .1em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .no-live-message {
+        margin: 40px 0;
+    }
+}
+
+// blog--------------------------------------------------//
+.blog-wrapper {
+    padding-top: 20px;
+    padding-bottom: 64px;
+
+    @include tb {
+        padding-top: 80px;
+        padding-bottom: 120px;
+        @include width-pc;
+    }
+
+    h2 {
+        font-size: $title-sp;
+        padding-bottom: 24px;
+        margin-left: 5%;
+
+        @include tb {
+            margin-left: 0;
+        }
+    }
+
+    .blog-list {
+        display: none;
+
+        @include tb {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        li {
+            @include tb {
+                width: 31%;
+                background-color: #fff;
+                box-shadow: 0 0 10px #ccc;
+                margin-bottom: 20px;
+                padding: 12px;
+
+                &:hover {
+                    transition: all 0.1s;
+                    opacity: 0.8;
+                }
+
+            }
+
+            .blog-text {
+                span {
+                    text-align: left;
+                    font-size: 1rem;
+                }
+
+                h3 {
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .blog-slider {
+        z-index: 100;
+
+        @include tb {
+            display: none;
+        }
+
+        li {
+            background-color: #fff;
+            box-shadow: 0 0 10px #ccc;
+            margin-bottom: 20px;
+            padding: 12px;
+
+            .blog-text {
+                span {
+                    text-align: left;
+                    margin-bottom: 4px;
+                }
+
+                h3 {
+                    font-size: 1.8rem;
+                    margin-top: -5px;
+                    margin-bottom: 8px;
+                    line-height: 1.6;
+
+                }
+            }
+        }
+    }
+
+    span {
+        display: block;
+        text-align: right;
+        margin-right: 40px;
+        transition: all 0.1s;
+
+        @include tb {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        @include tb {
+            margin-right: 0px;
+        }
+
+        a {
+            padding: 24px 12px;
+        }
+    }
+}
+
+
+//news 個別ページ--------------------------------------------------//
+.single-post {
+    .top-news span {
+        text-align-last: left;
+    }
+}
