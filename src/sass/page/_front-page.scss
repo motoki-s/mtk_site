@@ -72,6 +72,12 @@
         }
     }
 
+    //サファリ
+    _:lang(x)+_:-webkit-full-screen-document,
+    h2 {
+        padding-bottom: 0px;
+    }
+
     ul {
         // border-top: dashed 1px #ccc;
         margin-bottom: 48px;
@@ -154,11 +160,11 @@
 
     h2 {
         font-size: $title-sp;
-        padding-bottom: 12px;
         margin-left: 5%;
 
         @include tb {
             margin-left: 0;
+            padding-bottom: 12px;
         }
     }
 
@@ -319,6 +325,12 @@
             padding-bottom: 12px;
         }
 
+        //サファリ
+        _:lang(x)+_:-webkit-full-screen-document,
+        h2 {
+            padding-bottom: 0px;
+        }
+
         ul {
             // border-top: dashed 1px #ccc;
 
@@ -423,6 +435,12 @@
         @include tb {
             margin-left: 0;
         }
+    }
+
+    //サファリ
+    _:lang(x)+_:-webkit-full-screen-document,
+    h2 {
+        padding-bottom: 0px;
     }
 
     .blog-list {

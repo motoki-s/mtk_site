@@ -49,7 +49,7 @@
             background: url(../../img/icon-logo.png) center center/cover no-repeat;
             position: relative;
             z-index: 100;
-            transition: 0.5s;
+            transition: -0.5s;
             filter: invert(0%) sepia(61%) saturate(0%) hue-rotate(229deg) brightness(70%) contrast(300%);
 
             &.change {

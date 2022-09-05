@@ -7,15 +7,27 @@
 @import "../mixin/responsive";
 
 
+input,
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
 .page-id-241 {
     .reservation-contain {
         .container {
             padding-top: 40px;
         }
 
+        _:lang(x)+_:-webkit-full-screen-document,
+        .container {
+            padding-top: 24px;
+        }
+
         h2 {
             font-size: $title-sp;
-            padding-bottom: 20px;
+            // padding-bottom: 20px;
 
             @include tb {
                 font-size: 4rem;
@@ -94,6 +106,36 @@
                 resize: none;
             }
 
+
+            select[name="your-ticket"] {
+                padding-right: 24px;
+
+            }
+
+            tr:nth-child(6)::before {
+                content: "";
+                position: absolute;
+                left: 52px;
+                width: 7px;
+                height: 7px;
+                border-top: 2px solid #ccc;
+                border-left: 2px solid #ccc;
+                -webkit-transform: translateY(-50%) rotate(-135deg);
+                transform: translateY(-50%) rotate(-135deg);
+                font-size: 20px;
+                pointer-events: none;
+                margin-top: 50px;
+                z-index: 100;
+            }
+
+            //サファリ対応
+            _:lang(x)+_:-webkit-full-screen-document,
+            tr:nth-child(6)::before {
+                left: 48px;
+                margin-top: 52px;
+            }
+
+
             select[name="your-subject"] {
                 width: 100%;
 
@@ -101,9 +143,10 @@
                     width: 32%;
                 }
             }
-            
+
             input[type="submit"] {
                 @include btnBase;
+                -webkit-appearance: none;
 
                 @include tb {
                     width: 40%;
@@ -128,4 +171,15 @@
 .wpcf7-not-valid-tip {
     margin-top: -36px;
     margin-bottom: 24px;
+}
+
+
+//サファリ対応
+_:lang(x)+_:-webkit-full-screen-document,
+.wp-block-contact-form-7-contact-form-selector {
+    margin-top: -40px;
+
+    @include tb {
+        margin-top: 0;
+    }
 }

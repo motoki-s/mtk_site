@@ -17,6 +17,10 @@
         .container {
             padding-top: 40px;
         }
+        //サファリ対応
+        _:lang(x)+_:-webkit-full-screen-document,.container {
+            padding-top: 24px;
+        }
 
         h2 {
             font-size: $title-sp;
@@ -26,6 +30,12 @@
                 font-size: 4rem;
             }
         }
+
+            //サファリ対応
+            _:lang(x)+_:-webkit-full-screen-document,.wp-block-contact-form-7-contact-form-selector {
+                margin-top: -12px;
+            }
+
 
         .contact-form {
             table {
@@ -87,6 +97,7 @@
             
             input[type="submit"] {
                 @include btnBase;
+                -webkit-appearance: none;
                 // cursor: pointer;
 
                 @include tb {

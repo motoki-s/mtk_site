@@ -126,6 +126,7 @@
             border: 1px solid #222;
             appearance: none;
             outline: none;
+            background: #fff;
         }
 
         @include tb {
@@ -165,15 +166,8 @@
                 color: $btn-color;
                 border-bottom: 1px solid;
                 // padding-bottom: 4px;
-
             }
-
-
-
-
         }
-
-
     }
 }
 
