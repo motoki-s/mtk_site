@@ -6,7 +6,6 @@
 // レスポンシブ
 @import "../mixin/responsive";
 
-
 .page-id-206 {
     .contact-contain {
 
@@ -16,9 +15,12 @@
 
         .container {
             padding-top: 40px;
+            overflow: hidden;
         }
+
         //サファリ対応
-        _:lang(x)+_:-webkit-full-screen-document,.container {
+        _:lang(x)+_:-webkit-full-screen-document,
+        .container {
             padding-top: 24px;
         }
 
@@ -31,11 +33,11 @@
             }
         }
 
-            //サファリ対応
-            _:lang(x)+_:-webkit-full-screen-document,.wp-block-contact-form-7-contact-form-selector {
-                margin-top: -12px;
-            }
-
+        //サファリ対応
+        _:lang(x)+_:-webkit-full-screen-document,
+        .wp-block-contact-form-7-contact-form-selector {
+            margin-top: -12px;
+        }
 
         .contact-form {
             table {
@@ -89,16 +91,24 @@
 
             select[name="your-subject"] {
                 width: 100%;
+                background: #fff;
+                color: #444;
 
                 @include tb {
-                    width: 32%;
+                    width: 320px;
                 }
             }
-            
+
             input[type="submit"] {
                 @include btnBase;
                 -webkit-appearance: none;
                 // cursor: pointer;
+
+                //サファリ対応
+                _:lang(x)+_:-webkit-full-screen-document,
+                input[type="submit"] {
+                    margin-bottom: 0;
+                }
 
                 @include tb {
                     width: 40%;
@@ -109,6 +119,27 @@
                 text-align: center;
             }
         }
+    }
+}
+
+tr:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    -webkit-transform: translateY(-50%) rotate(-135deg);
+    transform: translateY(-50%) rotate(-135deg);
+    font-size: 20px;
+    pointer-events: none;
+    margin-top: -62px;
+    margin-left: 84%;
+    z-index: 100;
+
+    @include tb {
+        margin-left: 300px;
+
     }
 }
 

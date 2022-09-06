@@ -18,11 +18,6 @@
     .top-news {
         line-height: 1.6;
         padding-bottom: 120px;
-        
-        // @include tb {
-        //     padding-bottom: 120px;
-
-        // }
 
         a {
             color: #8DACC5;
@@ -114,10 +109,7 @@
         padding-left: 0;
         margin-top: -80px;
     }
-
-
 }
-
 
 //single blog--------------------------------/
 .single-blog {
@@ -262,7 +254,6 @@
                         margin-top: -5px;
                         margin-bottom: 8px;
                         line-height: 1.6;
-
                     }
                 }
             }

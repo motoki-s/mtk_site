@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .navigation {
     margin: 0 auto;
     position: relative;
@@ -103,7 +102,6 @@
         @include tb {
             max-width: 1020px;
         }
-
 
         .next.page-numbers {
             color: #fff;
@@ -255,20 +253,12 @@
     }
 }
 
-
-
 //戻るーーーーーーーーーーーーーーーーーーーーーーー
 .single,
 .single-live,
 .page {
 
     .more-btn {
-        // display: inline-block;
-        // margin-top: 40px;
-        // position: relative;
-        // left: 20px;
-
-
         color: #fff;
         position: absolute;
         left: 30px;
@@ -289,16 +279,14 @@
 
             @include tb {
                 width: 54px;
-                }
+            }
         }
 
         @include tb {
             &:hover {
                 left: 12px;
             }
-
         }
-
     }
 }
 

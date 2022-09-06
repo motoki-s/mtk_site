@@ -19,7 +19,6 @@
     </select>
 </div>
 
-
 <!-- PC term -->
 <ul class="term-list-pc down-to-top">
     <li>

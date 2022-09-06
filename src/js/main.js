@@ -5,6 +5,18 @@ $(".openbtn").click(function () {
     // $('.zdo_drawer_bg').fadeToggle();
 });
 
+// ハンバーガーメニューからnavを選択したらハンバーガーメニューを非表示
+$(function () {
+    if ($(window).width()) {
+        $('.menu-item>a').click(function () {
+            $('nav').removeClass('open');
+            $('.openbtn').removeClass('active');
+            // $('.zdo_drawer_bg').fadeToggle();
+        });
+    }
+})
+
+
 
 //ヘッダー
 
@@ -33,7 +45,6 @@ $(function () {
             navAm.removeClass('change');
         }
     });
-
 })
 
 
@@ -68,27 +79,24 @@ window.onload = function () {
 
 
 
+// $(window).on('load', function () {
+//     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
+//     //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+//     $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
-$(window).on('load', function () {
-    $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+//         $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
-    //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-    $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+//     });
+//     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
 
-        $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+//     //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+//     $('.splashbg').on('animationend', function () {
+//         //この中に動かしたいJSを記載
+//     });
+//     //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 
-    });
-    //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-
-    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-    $('.splashbg').on('animationend', function () {
-        //この中に動かしたいJSを記載
-    });
-    //=====ここまで背景が伸びた後に動かしたいJSをまとめる
-
-});
-
+// });
 
 
 
@@ -98,6 +106,7 @@ $(window).on('load', function () {
 
 
 
+//ヘッダー画像レスポンシブ対応
 $(function () {
     var $elem = $('.responsive_img');
     var sp = '_sp.';
@@ -123,3 +132,5 @@ $(function () {
         });
     });
 });
+
+

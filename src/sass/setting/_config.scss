@@ -15,7 +15,6 @@ $title-pc: 5.6rem;
 $btn-color: #568BAE;
 
 
-
 //ボタンベース
 @mixin btnBase($w: 100%, $pd: 20px 12px, $bg_c: #568BAE, $tx_c: #fff) {
     width: $w;
@@ -34,7 +33,5 @@ $btn-color: #568BAE;
         &:hover {
             opacity: 0.8;
         }
-
     }
 }
-

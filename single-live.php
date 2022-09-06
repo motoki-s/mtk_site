@@ -39,18 +39,13 @@
                     </div>
                 </div>
             </div>
-            <p><?php echo get_field('other');?></p>
+            <p><?php echo get_field('other'); ?></p>
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
 
 <!-- 戻る -->
 <div class="navigation">
-    <?php
-    $h = $_SERVER['HTTP_HOST'];
-    if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $h) !== false)) {
-        echo '<a class="more-btn" href="' . $_SERVER['HTTP_REFERER'] . '">< BACK</a>';
-    }
-    ?>
+    <a class="more-btn" href="javascript:history.back();"></a>
 </div>
 <?php get_footer(); ?>

@@ -13,11 +13,11 @@ select {
     appearance: none;
 }
 
-
 .page-id-241 {
     .reservation-contain {
         .container {
             padding-top: 40px;
+            overflow: hidden;
         }
 
         _:lang(x)+_:-webkit-full-screen-document,
@@ -106,16 +106,16 @@ select {
                 resize: none;
             }
 
-
             select[name="your-ticket"] {
-                padding-right: 24px;
-
+                // padding-right: 32px;
+                background: #fff;
+                color: #444;
+                padding: 12px 28px 12px 12px;
             }
 
             tr:nth-child(6)::before {
                 content: "";
                 position: absolute;
-                left: 52px;
                 width: 7px;
                 height: 7px;
                 border-top: 2px solid #ccc;
@@ -125,13 +125,14 @@ select {
                 font-size: 20px;
                 pointer-events: none;
                 margin-top: 50px;
+                margin-left: 32px;
                 z-index: 100;
             }
 
             //サファリ対応
             _:lang(x)+_:-webkit-full-screen-document,
             tr:nth-child(6)::before {
-                left: 48px;
+                left: 20px;
                 margin-top: 52px;
             }
 
@@ -163,8 +164,6 @@ select {
         padding-top: 0;
         height: 0;
     }
-
-
 }
 
 //エラー文
@@ -173,13 +172,19 @@ select {
     margin-bottom: 24px;
 }
 
-
-//サファリ対応
 _:lang(x)+_:-webkit-full-screen-document,
 .wp-block-contact-form-7-contact-form-selector {
-    margin-top: -40px;
+    form {
 
-    @include tb {
-        margin-top: 0;
+        p,
+        br {
+            display: none;
+        }
+
+        white-space: nowrap;
+
+        .submit {
+            display: block;
+        }
     }
 }

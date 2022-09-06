@@ -1,6 +1,3 @@
-
-
-
 .footer {
     text-align: center;
     font-size: 1.2rem;
@@ -41,7 +38,7 @@
         height: 180px;
 
         @include tb {
-        padding-left: 24px;
+            padding-left: 24px;
         }
     }
 
@@ -51,8 +48,6 @@
         background-color: rgba(255, 255, 255, 0);
     }
 }
-
-
 
 .single-post {
     .sns-navi.share {
@@ -69,7 +64,6 @@
             font-size: 1.6rem;
         }
     }
-
 }
 
 .single-blog {
@@ -80,34 +74,17 @@
     }
 }
 
+//コンタクトページ
+.page-id-206 {
+    .footer small {
+        padding-top: 0;
+        height: 0;
+    }
 
-
-
-// .home {
-
-//     .footer {
-//         color: #444;
-
-
-//         .sns-navi {
-//             display: flex;
-            
-
-
-//             .fa-brands {
-//                 font-size: 2rem;
-//                 margin-right: 20px;
-//             }
-
-
-
-//         }
-
-//         small {
-//             display: block;
-//             background: #fff;
-//         }
-
-
-//     }
-// }
+    //サファリ対応
+    _:lang(x)+_:-webkit-full-screen-document,
+    .footer small {
+        padding-top: 0;
+        height: 0;
+    }
+}
