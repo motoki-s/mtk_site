@@ -120,28 +120,29 @@
             }
         }
     }
-}
 
-tr:nth-child(4)::after {
-    content: "";
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-top: 2px solid #ccc;
-    border-left: 2px solid #ccc;
-    -webkit-transform: translateY(-50%) rotate(-135deg);
-    transform: translateY(-50%) rotate(-135deg);
-    font-size: 20px;
-    pointer-events: none;
-    margin-top: -62px;
-    margin-left: 84%;
-    z-index: 100;
-
-    @include tb {
-        margin-left: 300px;
-
+    //ドロップダウン矢印
+    tr:nth-child(4)::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid #ccc;
+        border-left: 2px solid #ccc;
+        -webkit-transform: translateY(-50%) rotate(-135deg);
+        transform: translateY(-50%) rotate(-135deg);
+        font-size: 20px;
+        pointer-events: none;
+        margin-top: -62px;
+        margin-left: 84%;
+        z-index: 100;
+    
+        @include tb {
+            margin-left: 300px;
+        }
     }
 }
+
 
 //エラー文
 .wpcf7-not-valid-tip {

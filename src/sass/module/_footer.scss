@@ -5,6 +5,10 @@
     line-height: 80px;
     color: #444;
 
+    @include tb {
+        padding-top: 24px;
+    }
+
     .sns-navi {
         display: flex;
         padding-left: 28px;
@@ -75,7 +79,9 @@
 }
 
 //コンタクトページ
-.page-id-206 {
+//ブログページ
+.page-id-206,
+.page-id-80 {
     .footer small {
         padding-top: 0;
         height: 0;
@@ -88,3 +94,11 @@
         height: 0;
     }
 }
+
+//ブログページ　ページネーション余白
+.page-id-80 {
+    .current {
+        padding: 4px 0 0 4px;
+    }
+}
+
