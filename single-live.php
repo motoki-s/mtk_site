@@ -8,7 +8,6 @@
             $week = ['(Sun)', '(Mon)', '(Tue)', '(Wed)', '(Thu)', '(Fri)', '(Sat)'];
             $attachment_id = get_field('image');
             $post_id = get_the_id();
-
             ?>
             <span><?php echo $date->format('Y.n.j') . $week[$date->format('w')]; ?></span>
             <h2><?php the_title(); ?></h2>
@@ -27,12 +26,15 @@
                         <h3>Ticket</h3>
                         <p><?php echo get_field('ticket'); ?></p>
                     </div>
-                    <div class="reserve-btn">
-                        <a href="<?php echo add_query_arg([
-                                        'date' => $date->format('Y.n.j'),
-                                        'title' => get_the_title()
-                                    ], esc_url(home_url()) . '/reservation'); ?>">予約する</a>
-                    </div>
+                    <!-- 予約ボタン 過去日は非表示 -->
+                    <?php if ($date->format('Y.n.j') >= date('Y.n.d')) : ?>
+                        <div class="reserve-btn">
+                            <a href="<?php echo add_query_arg([
+                                            'date' => $date->format('Y.n.j'),
+                                            'title' => get_the_title()
+                                        ], esc_url(home_url()) . '/reservation'); ?>">予約する</a>
+                        </div>
+                    <?php endif; ?>
                     <div class="act-info">
                         <h3>Act</h3>
                         <p><?php echo get_field('act'); ?></p>

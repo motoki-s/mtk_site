@@ -124,6 +124,7 @@ function get_specific_posts($post_type, $taxonomy = null, $term = null, $number 
 
 
 
+
 //抜粋のデフォルト文字数を定義
 function cms_excerpt_more()
 {

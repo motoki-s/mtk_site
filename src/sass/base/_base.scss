@@ -37,6 +37,12 @@ a {
     color: #444;
 }
 
+select,
+input,
+textarea {
+    font-size: 1.6rem;
+}
+
 .container {
     @include width-sp;
 

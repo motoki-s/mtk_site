@@ -53,10 +53,11 @@
     }
 }
 
-.single-post {
+.single-post,
+.single-live {
     .sns-navi.share {
         margin-top: -80px;
-        padding-left: 20px;
+        // padding-left: 20px;
 
         @include tb {
             position: static;
@@ -101,4 +102,3 @@
         padding: 4px 0 0 4px;
     }
 }
-
