@@ -9,7 +9,7 @@
             $attachment_id = get_field('image');
             $post_id = get_the_id();
             ?>
-            <span><?php echo $date->format('Y.n.j') . $week[$date->format('w')]; ?></span>
+            <span><?php echo $date->format('Y.m.d') . $week[$date->format('w')]; ?></span>
             <h2><?php the_title(); ?></h2>
             <div class="live-wrapper">
                 <div class="live-place">
@@ -27,10 +27,10 @@
                         <p><?php echo get_field('ticket'); ?></p>
                     </div>
                     <!-- 予約ボタン 過去日は非表示 -->
-                    <?php if ($date->format('Y.n.j') >= date('Y.n.d')) : ?>
+                    <?php if ($date->format('Y.m.d') >= date('Y.m.d')) : ?>
                         <div class="reserve-btn">
                             <a href="<?php echo add_query_arg([
-                                            'date' => $date->format('Y.n.j'),
+                                            'date' => $date->format('Y.m.d'),
                                             'title' => get_the_title()
                                         ], esc_url(home_url()) . '/reservation'); ?>">予約する</a>
                         </div>

@@ -7,6 +7,13 @@
 @import "../mixin/responsive";
 
 
+.page-child {
+    p a {
+        color: #8DACC5;
+    }
+}
+
+
 .youtube {
     position: relative;
     width: 100%;

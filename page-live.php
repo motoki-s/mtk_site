@@ -4,7 +4,7 @@
         <h2 class="down-to-top">LIVE</h2>
         <ul>
             <?php
-            $live_pages = get_specific_posts('live', 'kind', '', 2, 'datetime', 'meta_value_num', '');
+            $live_pages = get_specific_posts('live', 'kind', '', 10, 'datetime', 'meta_value_num', '');
             if ($live_pages->have_posts()) :
                 while ($live_pages->have_posts()) : $live_pages->the_post();
                     $date = get_field('datetime', false, false);
@@ -12,7 +12,7 @@
                     $week = ['(Sun)', '(Mon)', '(Tue)', '(Wed)', '(Thu)', '(Fri)', '(Sat)'];
             ?>
                     <li class="down-to-top">
-                        <p class="live-date"><?php echo $date->format('Y.n.j') . $week[$date->format('w')]; ?></p>
+                        <p class="live-date"><?php echo $date->format('Y.m.d') . $week[$date->format('w')]; ?></p>
                         <a href="<?php the_permalink(); ?>">
 
                             <div class="live-content">

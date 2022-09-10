@@ -7,8 +7,10 @@
 
     @include tb {
         padding-top: 24px;
+        height: 120px;
     }
 
+    //SNSアイコン---------------------------//
     .sns-navi {
         display: flex;
         padding-left: 28px;
@@ -54,10 +56,13 @@
 }
 
 .single-post,
-.single-live {
+.single-live,
+.page {
     .sns-navi.share {
+        position: absolute;
         margin-top: -80px;
         // padding-left: 20px;
+        padding: 0 0 0 24px;
 
         @include tb {
             position: static;

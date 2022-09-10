@@ -68,7 +68,7 @@ function get_child_pages($number = -1, $specified_id = null)
         'paged' => $paged,           //ページネーション用
         'post_type' => 'page',       //投稿タイプ（記事ループと条件にする）
         'posts_per_page' => $number,     //表示投稿数（記事ループと条件にする）
-        'orderby' => 'post_date',    //表示順条件（記事ループと条件にする）
+        'orderby' => 'menu_order',    //表示順条件（記事ループと条件にする）
         'order' => 'DESC',           //降順（記事ループと条件にする）
         'post_status' => 'publish',   //公開済みのみ表示（記事ループと条件にする）
         'paged' => $paged,
@@ -77,11 +77,6 @@ function get_child_pages($number = -1, $specified_id = null)
     $child_pages = new WP_Query($args);
     return $child_pages;
 }
-
-
-
-
-
 
 
 //特定の記事を抽出する関数
@@ -303,7 +298,7 @@ function get_main_title_pc()
 //yotube埋め込みレスポンシブ化
 function iframe_in_div($the_content)
 {
-    if (is_page()) {
+    if (is_page() || is_single()) {
         $the_content = preg_replace('/<iframe/i', '<div class="youtube"><iframe', $the_content);
         $the_content = preg_replace('/<\/iframe>/i', '</iframe></div>', $the_content);
     }

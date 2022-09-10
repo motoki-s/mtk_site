@@ -132,10 +132,8 @@ select {
             //サファリ対応
             _:lang(x)+_:-webkit-full-screen-document,
             tr:nth-child(6)::before {
-                left: 20px;
-                margin-top: 52px;
+                margin-top: 54px;
             }
-
 
             select[name="your-subject"] {
                 width: 100%;
@@ -172,19 +170,17 @@ select {
     margin-bottom: 24px;
 }
 
-_:lang(x)+_:-webkit-full-screen-document,
-.wp-block-contact-form-7-contact-form-selector {
-    form {
+//空行、空スペースの非表示
+form {
 
-        p,
-        br {
-            display: none;
-        }
+    p,
+    br {
+        display: none;
+    }
 
-        white-space: nowrap;
+    white-space: nowrap;
 
-        .submit {
-            display: block;
-        }
+    .submit {
+        display: block;
     }
 }

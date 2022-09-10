@@ -30,7 +30,7 @@
             position: absolute;
             left: 30px;
             margin-top: -28px;
-            transition: all .3s;
+            transition: all 0.3s;
             padding: 12px 0px;
 
             &::after {
@@ -86,11 +86,7 @@
     }
 }
 
-
-
-
 // ページネーション固定ページ
-
 .page,
 .single-blog {
 
@@ -107,10 +103,10 @@
             color: #fff;
             position: absolute;
             right: 30px;
-            margin-top: -4px;
+            // margin-top: -4px;
             transition: all .3s;
-            padding: 12px 0px;
-            top: -56px;
+            padding: 20px 32px;
+            top: -12px;
 
             &::after {
                 content: '';
@@ -134,14 +130,21 @@
             }
         }
 
+        //サファリ対応
+        _:lang(x)+_:-webkit-full-screen-document,
+        .next.page-numbers {
+            top: -12px;
+            padding: 20px 32px;
+        }
+
         .prev.page-numbers {
             color: #fff;
             position: absolute;
             left: 30px;
-            margin-top: -4px;
+            // margin-top: -4px;
             transition: all .3s;
-            padding: 12px 0px;
-            top: -56px;
+            padding: 20px 32px;
+            top: -12px;
 
             &::after {
                 content: '';
@@ -164,6 +167,12 @@
                 }
             }
         }
+        //サファリ対応
+        _:lang(x)+_:-webkit-full-screen-document,
+        .prev.page-numbers {
+            top: -12px;
+            padding: 20px 32px;
+        }
 
         .page-numbers {
             margin: 0 -4px;
@@ -181,17 +190,16 @@
         border-radius: 50%;
     }
 
-
     // カスタム投稿ページ
     .wp-pagenavi {
         .nextpostslink {
             position: absolute;
             right: 30px;
             color: rgba(255, 255, 255, 0);
-            width: 80px;
+            // width: 80px;
             top: -4px;
             transition: all .3s;
-            padding: 12px 0px;
+            padding: 12px 20px;
 
             &::after {
                 content: '';
@@ -219,10 +227,10 @@
             position: absolute;
             left: 30px;
             color: #fff;
-            width: 80px;
+            // width: 80px;
             top: -4px;
             transition: all .3s;
-            padding: 12px 0px;
+            padding: 12px 20px;
 
             &::after {
                 content: '';
@@ -263,13 +271,14 @@
 .page {
 
     .more-btn {
+        // display: inline-block;
         color: #fff;
         position: absolute;
         left: 30px;
         margin-top: -12px;
-        // padding: 12px 28px;
+        padding: 20px 28px;
         transition: all .3s;
-        padding: 12px 0;
+        // padding: 12px 0;
 
         &::after {
             content: '';
@@ -295,15 +304,19 @@
 }
 
 .single-post {
-    .more-btn {
-        &::after {
-            top: 56px;
-        }
+    .navigation {
+        top: 28px;
     }
 }
 
 .single-live {
     .more-btn {
         margin-top: 20px;
+    }
+}
+
+.page-child {
+    .navigation {
+        top: 24px;
     }
 }

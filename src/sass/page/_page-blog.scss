@@ -60,10 +60,12 @@
                         // min-width: 120px;
                         padding-top: 80px;
                         flex-basis: 26vw;
+                        height: 16vw;
 
                         @include tb {
                             width: 230px;
                             padding-top: 120px;
+                            height: 0;
                         }
                     }
 
@@ -79,11 +81,20 @@
                         h3 {
                             font-size: 1.8rem;
                             margin-bottom: 8px;
-                            
 
-                            // @include tb {
-                            //     margin-bottom: 8px;
-                            // }
+                            @include sb {
+                                font-size: 2.2rem;
+                            }
+                            
+                            @include tb {
+                                font-size: 1.8rem;
+                            }
+                        }
+
+                        p {
+                            @include sb {
+                                font-size: 1.6rem;
+                            }
                         }
                     }
                 }

@@ -16,10 +16,7 @@ $(function () {
     }
 })
 
-
-
 //ヘッダー
-
 // スクロールしたらヘッダー変わる
 $(function () {
     var header = $('#header-change');
@@ -30,7 +27,7 @@ $(function () {
 
     $(window).scroll(function () {
 
-        if ($(this).scrollTop()) {
+        if ($(this).scrollTop() > 250) {
             header.addClass('change');
             headerlogo.addClass('change');
             headerText.addClass('change');
@@ -46,8 +43,6 @@ $(function () {
         }
     });
 })
-
-
 
 
 //したから上へ表示
@@ -69,11 +64,6 @@ window.onload = function () {
         });
     }
 };
-
-
-
-
-
 
 
 
@@ -133,4 +123,37 @@ $(function () {
     });
 });
 
+
+//logoの表示
+// $(window).on('load', function () {
+//     $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+//     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+// });
+
+
+
+//同じ日付で2回目以降ならローディング画面非表示の設定
+
+$(function () {
+    var webStorage = function () {
+        if (sessionStorage.getItem('access')) {
+            /*
+            2回目以降アクセス時の処理
+            */
+            $("#loading").addClass('is-active');
+        } else {
+            /*
+            初回アクセス時の処理
+            */
+            sessionStorage.setItem('access', 'true'); // sessionStorageにデータを保存
+            $("#loading-animation").addClass('is-active'); // loadingアニメーションを表示
+            setTimeout(function () {
+                // ローディングを数秒後に非表示にする
+                $("#loading").addClass('is-active');
+                $("#loading-animation").removeClass('is-active');
+            }, 3000); // ローディングを表示する時間
+        }
+    }
+    webStorage();
+});
 

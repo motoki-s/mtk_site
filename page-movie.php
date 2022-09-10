@@ -47,8 +47,8 @@
             'format' => 'page/%#%/',
             'current' => max(1, $paged),
             'total' => $the_query->max_num_pages,
-            'prev_text' => '< PREV', //次への表示指定
-            'next_text' => 'NEXT >' //前への表示指定
+            'prev_text' => '', //次への表示指定
+            'next_text' => '' //前への表示指定
         ));
     }
     wp_reset_postdata();

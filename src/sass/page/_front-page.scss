@@ -17,7 +17,7 @@
     background-color: #fff;
     // min-width: 300px;
 
-    @include pc {
+    @include tb {
         display: none;
     }
 
@@ -33,7 +33,7 @@
         margin: 0 20px;
     }
 
-    @include pc {
+    @include tb {
         display: block;
         padding-top: 24px;
         display: flex;
@@ -191,6 +191,10 @@
         margin-bottom: 75px;
         height: 180px;
 
+        @include sb {
+            height: 280px;
+        }
+
         @include tb {
             margin: 0 16px 0px;
             height: 350px;
@@ -200,8 +204,12 @@
             margin-left: 26px;
             padding-top: 56px;
 
+            @include sb {
+                padding-top: 110px;
+            }
+
             @include tb {
-                margin-left: 3%;
+                margin-left: 0;
                 // padding-top: 360px;
                 padding-top: 16px;
                 color: #fff;
@@ -215,6 +223,7 @@
         flex-direction: row-reverse;
         max-width: 128px;
         margin-left: auto;
+        margin-right: 26px;
 
         a {
             padding: 24px 12px;
@@ -248,6 +257,10 @@
 .play-wrapper {
     text-align: center;
     padding-top: 50px;
+
+    @include sb {
+        padding-top: 100px;
+    }
 
     @include tb {
         padding-top: 120px;
@@ -358,8 +371,10 @@
                     display: flex;
 
                     .live-image {
-                        padding-top: 80px;
+                        // padding-top: 80px;
+                        padding-top: 12vw;
                         flex-basis: 26vw;
+                        padding-top: 16vw;
 
                         @include tb {
                             width: 230px;
@@ -373,6 +388,10 @@
                         margin-left: 16px;
                         line-height: 1.6;
 
+                        @include sb {
+                            margin-left: 24px;
+                        }
+
                         @include tb {
                             margin-left: 32px;
                         }
@@ -380,6 +399,10 @@
                         h3 {
                             // font-size: 1.8rem;
                             margin-bottom: 8px;
+
+                            @include sb {
+                                font-size: 2rem;
+                            }
 
                             @include tb {
                                 font-size: 1.8rem;
@@ -391,6 +414,10 @@
                             font-size: 1.2rem;
                             letter-spacing: .1em;
                             margin-bottom: 8px;
+
+                            @include sb {
+                                font-size: 1.6rem;
+                            }
 
                             @include tb {
                                 font-size: 1.4rem;
@@ -533,9 +560,3 @@
 }
 
 
-//news 個別ページ--------------------------------------------------//
-.single-post {
-    .top-news span {
-        text-align-last: left;
-    }
-}

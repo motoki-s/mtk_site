@@ -64,20 +64,69 @@
             //再生ボタン---------------------------//
             .play-wrapper {
                 padding-top: 80px;
+
+                @include sb {
+                    padding-top: 160px;
+                }
+
+                @include tb {
+                    padding-top: 80px;
+                }
+            }
+            //サファリ
+            _:lang(x)+_:-webkit-full-screen-document, .play-wrapper {
+                padding-top: 76px;
             }
 
+
             .movie-title {
-                margin-left: 26px;
+                // margin-left: 26px;
                 // padding-top: 56px;
                 color: #fff;
                 text-align: center;
+                background-color: rgba(71, 71, 71, 0.5);
+                height: 28vh;
+                padding-top: 20vh;
+                margin-top: -19vh;
+
+                @include sb {
+                    height: 438px;
+                    padding-top: 267px;
+                    margin-top: -240px;
+                }
 
                 @include tb {
-                    margin-left: 3%;
+                    // margin-left: 3%;
                     padding-top: 0;
                     // color: #fff;
                     // text-align: center;
+                    height: 28vh;
+                    padding-top: 20vh;
+                    margin-top: -19vh;
                 }
+            }
+
+            //サファリ
+            _:lang(x)+_:-webkit-full-screen-document,
+            .movie-title {
+                height: 32vh;
+                padding-top: 168px;
+                margin-top: -21vh;
+
+                @include sb {
+                    height: 56vh;
+                    padding-top: 250px;
+                    margin-top: -31vh;
+                }
+
+
+                @include tb {
+
+                    height: 31vh;
+                    padding-top: 20vh;
+                    margin-top: -21vh;
+                }
+
             }
         }
 
@@ -87,8 +136,13 @@
             margin: 0 calc(50% - 50vw);
             height: 240px;
 
+            @include sb {
+                height: 440px;
+            }
+
             @include tb {
                 margin: 0;
+                height: 240px;
             }
         }
     }
@@ -108,7 +162,7 @@
             content: "";
             position: absolute;
             right: 24px;
-            top: 20px;
+            top: 24px;
             width: 10px;
             height: 10px;
             border-top: 2px solid #ccc;

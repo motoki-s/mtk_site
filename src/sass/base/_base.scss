@@ -19,7 +19,7 @@ body {
     color: #444;
     overflow-wrap: break-word;
 
-    @include pc {
+    @include tb {
         font-size: $font-pc;
     }
 }
@@ -54,9 +54,6 @@ textarea {
 .bg-white {
     background-color: #fff;
 }
-
-
-
 
 
 //投稿記事

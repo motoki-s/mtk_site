@@ -15,7 +15,7 @@
             <?php endif; ?>
 
             <!-- snsシェア -->
-            <?php if (is_singular(['post', 'live'])) : ?>
+            <?php if (is_singular(['post', 'live',]) || (is_page() && $post->post_parent)) : ?>
                 <ul class="sns-navi share container">
                     <span>SHARE</span>
                     <li class="icon-instagram">

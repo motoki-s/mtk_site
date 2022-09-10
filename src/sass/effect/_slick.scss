@@ -147,6 +147,7 @@
 // movie
 .movie .slick-list {
     padding: 0 12%;
+    padding-bottom: 24px;
 
     @include tb {
         padding: 0 22%;
@@ -155,8 +156,13 @@
 }
 
 //blog
-.blog-wrapper .slick-list {
-    padding: 0 6%;
+.blog-wrapper .slick-list,
+.rel-article .slick-list {
+    padding: 0 8%;
+
+    @include sb {
+    padding: 0 20%;
+    }
 }
 
 
@@ -177,7 +183,11 @@
 
 .slider .slick-slide {
     margin: 0 4px;
-    height: 240px;
+    height: 220px;
+
+    @include sb {
+        height: 320px;
+    }
 
     @include tb {
         height: auto;

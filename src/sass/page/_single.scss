@@ -33,6 +33,17 @@
     }
 }
 
+//news 個別ページ--------------------------------------------------//
+
+.single-post {
+    .top-news span {
+        text-align-last: left;
+        margin-left: 0;
+        display: block;
+        max-width: 100%;
+    }
+}
+
 //single-live-----------------------------------/
 .single-live {
     .live-content {
@@ -216,7 +227,7 @@
 
         @include tb {
             padding-top: 80px;
-            padding-bottom: 120px;
+            // padding-bottom: 120px;
             @include width-pc;
         }
 

@@ -8,11 +8,6 @@
 
 .page-id-206 {
     .contact-contain {
-
-        @include tb {
-            padding-bottom: 80px;
-        }
-
         .container {
             padding-top: 40px;
             overflow: hidden;
@@ -26,7 +21,6 @@
 
         h2 {
             font-size: $title-sp;
-            // padding-bottom: 20px;
 
             @include tb {
                 font-size: 4rem;
@@ -133,7 +127,7 @@
         transform: translateY(-50%) rotate(-135deg);
         font-size: 20px;
         pointer-events: none;
-        margin-top: -62px;
+        margin-top: -64px;
         margin-left: 84%;
         z-index: 100;
     
@@ -142,7 +136,6 @@
         }
     }
 }
-
 
 //エラー文
 .wpcf7-not-valid-tip {

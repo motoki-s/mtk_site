@@ -12,11 +12,14 @@
 
 <body <?php body_class(); ?>>
 
-    <div id="splash">
-        <!-- <div id="splash-logo">ローディング</div> -->
-        <!--/splash-->
+    <div id="loading">
+        <div id="loading-animation">
+            <img src="<?php echo get_template_directory_uri() ;?>/img/fv-logo-sp-white.png" alt="" class="fadeUp">
+        </div>
     </div>
-    <div class="splashbg"></div>
+    <!--/splash-->
+    <!-- <div class="splashbg"></div> -->
+
     <!---画面遷移用-->
     <div id="container">
 
