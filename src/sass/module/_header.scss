@@ -34,6 +34,7 @@
         justify-content: space-between;
         align-items: center;
         @include width-sp;
+        max-width: 98%;
 
         @include tb {
             @include width-pc;
@@ -277,7 +278,7 @@
         }
 
         img {
-            width: 80%;
+            width: 64%;
             object-fit: contain;
             max-width: 280px;
         }

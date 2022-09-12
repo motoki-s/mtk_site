@@ -46,7 +46,7 @@
         <!--/slider-->
         <ul class="slider pc-list">
             <?php
-            $movie_pages = get_child_pages(3, $movie_obj->ID);
+            $movie_pages = get_child_pages(10, $movie_obj->ID);
             if ($movie_pages->have_posts()) :
                 while ($movie_pages->have_posts()) : $movie_pages->the_post();
             ?>

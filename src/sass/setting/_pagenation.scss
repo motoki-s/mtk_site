@@ -167,6 +167,7 @@
                 }
             }
         }
+
         //サファリ対応
         _:lang(x)+_:-webkit-full-screen-document,
         .prev.page-numbers {
@@ -263,6 +264,29 @@
             display: inline-block;
         }
     }
+}
+
+.single-blog {
+    .wp-pagenavi {
+        .nextpostslink {
+            right: 16px;
+            padding: 12px 0;
+
+            @include tb {
+                right: 28px;
+            }
+        }
+        .previouspostslink {
+            left: 16px;
+            padding: 12px 0;
+
+            @include tb {
+                left: 28px;
+            }
+        }
+    }
+
+
 }
 
 //戻るーーーーーーーーーーーーーーーーーーーーーーー

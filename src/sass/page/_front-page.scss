@@ -46,13 +46,14 @@
 
 // news--------------------------------------------------//
 .top-news {
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 40px;
     background-color: #fff;
     margin: 0 calc(50% - 50vw);
 
     @include tb {
         // padding-top: 120px;
+        padding-top: 40px;
         padding-bottom: 80px;
     }
 
@@ -203,6 +204,7 @@
         .movie-title {
             margin-left: 26px;
             padding-top: 56px;
+            font-weight: bold;
 
             @include sb {
                 padding-top: 110px;
@@ -210,10 +212,15 @@
 
             @include tb {
                 margin-left: 0;
+                font-weight: normal;
                 // padding-top: 360px;
                 padding-top: 16px;
                 color: #fff;
                 text-align: center;
+                // background-color: rgba(71, 71, 71, 0.5);
+                height: 40vh;
+                padding-top: 24vh;
+                margin-top: -23vh;
             }
         }
     }
@@ -301,8 +308,8 @@
     z-index: -200;
     width: 100%;
     height: 100vh;
-    background: url(../../img/bg-top-page.jpg) center center / cover no-repeat;
-    filter: blur(5px)brightness(120%);
+    background: url(../../img/bg-top-page-4.jpg) center center / cover no-repeat;
+    filter: blur(8px)brightness(120%);
 
     @include tb {
         width: 55%;
@@ -383,7 +390,7 @@
                     }
 
                     .live-text {
-                        margin-top: -8px;
+                        // margin-top: -8px;
                         flex-basis: 60vw;
                         margin-left: 16px;
                         line-height: 1.6;
@@ -452,10 +459,11 @@
 
     h2 {
         font-size: $title-sp;
-        padding-bottom: 24px;
+        padding-bottom: 8px;
         margin-left: 5%;
 
         @include tb {
+            padding-bottom: 24px;
             margin-left: 0;
         }
     }
@@ -524,11 +532,13 @@
             .blog-text {
                 span {
                     text-align: left;
+                    margin-top: 8px;
                     margin-bottom: 4px;
+                    font-size: 1.3rem;
                 }
 
                 h3 {
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     margin-top: -5px;
                     margin-bottom: 8px;
                     line-height: 1.6;
@@ -558,5 +568,3 @@
         }
     }
 }
-
-

@@ -67,7 +67,7 @@
     <?php if ($the_query->post_count > 0) : ?>
         <!-- 該当する投稿が１件以上あったら下記出力  -->
         <aside class="rel-article">
-            <h5>関連記事</h5>
+            <h5>その他の記事</h5>
             <!-- sp -->
             <ul class="blog-slider">
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
@@ -83,7 +83,7 @@
                                 ?>
                             </div>
                             <div class="blog-text">
-                                <span class="post_date"><?php echo get_post_time('Y.n.j(D)'); ?></span>
+                                <span class="post_date"><?php echo get_post_time('Y.m.d'); ?></span>
                                 <h3><?php echo wp_trim_words(get_the_title(), 48, "…", "UTF-8"); ?></h3>
                                 <p><?php echo get_the_excerpt(); ?></p>
                             </div>
@@ -107,7 +107,7 @@
                                 ?>
                             </div>
                             <div class="blog-text">
-                                <span class="post_date"><?php echo get_post_time('Y.n.j(D)'); ?></span>
+                                <span class="post_date"><?php echo get_post_time('Y.m.d'); ?></span>
                                 <h3><?php echo wp_trim_words(get_the_title(), 48, "…", "UTF-8"); ?></h3>
                                 <p><?php echo get_the_excerpt(); ?></p>
                             </div>
