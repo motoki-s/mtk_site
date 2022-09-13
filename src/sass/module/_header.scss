@@ -185,10 +185,11 @@
     }
 }
 
-// movie
+// トップ以外のページヘッダー
 .single,
 .archive,
-.page {
+.page,
+.error404 {
     .fv {
         // min-width: 300px;
         filter: brightness(100%);
@@ -258,7 +259,8 @@
 //movie
 .single,
 .archive,
-.page {
+.page,
+.error404 {
     .fv-title {
         position: absolute;
         top: 30vh;
@@ -312,7 +314,8 @@
 
 .archive,
 //logo
-.page {
+.page,
+.error404 {
     .fv-title {
         top: 0;
         left: -30px;

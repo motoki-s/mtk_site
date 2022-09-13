@@ -183,7 +183,7 @@ function get_main_image()
         }
 
 
-    } elseif (is_archive() || is_singular('post')) {
+    } elseif (is_archive() || is_singular('post') || is_404()) {
         return '<img src="' . get_template_directory_uri() . '/img/news-fv-pc.jpg" />';
     } elseif (is_singular('live')) {
         return '<img src="' . get_template_directory_uri() . '/img/live-fv.jpg" />';
@@ -210,18 +210,6 @@ function image_tag_delete( $html ){
     }
     add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
     add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -263,7 +251,7 @@ function get_main_title_sp()
     } elseif (is_singular(['live', 'blog'])) {   //live,blog ページ
         $post_title = $post->post_type; //カスタム投稿タイプ名
         return ucfirst($post_title); //先頭大文字
-    } elseif (is_page('profile')) {  //ロゴ表示
+    } elseif (is_page('profile') || is_404()) {  //ロゴ表示
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp.png" alt="motoki sakuma sp-logo">';
     } else {
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp-white.png" alt="motoki sakuma sp-logo-white">';
@@ -284,7 +272,7 @@ function get_main_title_pc()
     } elseif (is_singular(['live', 'blog'])) {   //live,blog ページ
         $post_title = $post->post_type; //カスタム投稿タイプ名
         return ucfirst($post_title); //先頭大文字
-    } elseif (is_page('profile')) {  //ロゴ表示
+    } elseif (is_page('profile') || is_404()) {  //ロゴ表示
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-pc.png" alt="motoki sakuma sp-logo">';
     } else {
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-pc-white.png" alt="motoki sakuma sp-logo-white">';

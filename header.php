@@ -22,8 +22,6 @@
 
     <!---画面遷移用-->
     <div id="container">
-
-
         <!-- header -->
         <header id="header-change" class="header">
             <div class="header-container">
