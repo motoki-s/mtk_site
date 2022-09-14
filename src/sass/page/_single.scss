@@ -34,7 +34,6 @@
 }
 
 //news 個別ページ--------------------------------------------------//
-
 .single-post {
     .top-news span {
         text-align-last: left;
@@ -199,6 +198,8 @@
                 }
 
                 p {
+                    font-size: 1.2rem;
+
                     @include tb {
                         font-size: 1.6rem;
                     }
@@ -223,17 +224,14 @@
     .rel-article {
         padding-top: 80px;
         padding-bottom: 64px;
-        // min-width: 300px;
 
         @include tb {
             padding-top: 80px;
-            // padding-bottom: 120px;
             @include width-pc;
         }
 
         h5 {
             font-size: $title-sp;
-            // margin-left: 5%;
 
             @include tb {
                 margin-left: 0;

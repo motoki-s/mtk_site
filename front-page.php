@@ -30,7 +30,7 @@
                 ?>
             </ul>
         </div>
-        <span><a href="<?php echo esc_url(get_term_link($term_obj)); ?>">View more</a></span>
+        <span class="down-to-top"><a href="<?php echo esc_url(get_term_link($term_obj)); ?>">View more</a></span>
     </div>
 </section>
 
@@ -75,7 +75,7 @@
             ?>
         </ul>
     </div>
-    <span><a href="<?php echo esc_url(home_url('movie')); ?>">View more</a></span>
+    <span class="down-to-top"><a href="<?php echo esc_url(home_url('movie')); ?>">View more</a></span>
 </section>
 
 <!-- live -->
@@ -187,6 +187,6 @@
         endif;
         ?>
     </ul>
-    <span><a href="<?php echo esc_url(home_url('blog')); ?>">View more</a></span>
+    <span class="down-to-top"><a href="<?php echo esc_url(home_url('blog')); ?>">View more</a></span>
 </section>
 <?php get_footer(); ?>

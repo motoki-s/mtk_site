@@ -10,12 +10,10 @@
 .page-id-80 {
 
     line-height: 1.6;
+
     .blog-contain {
         padding-top: 40px;
         padding-bottom: 40px;
-        // background-color: #fff;
-
-        // min-width: 300px;
 
         @include tb {
             display: flex;
@@ -37,8 +35,6 @@
         }
 
         ul {
-            // border-top: dashed 1px #ccc;
-
             @include tb {
                 width: 75%;
             }
@@ -48,8 +44,6 @@
                 border-bottom: dashed 1px #ccc;
 
                 .blog-date {
-                    // font-size: 1.8rem;
-                    // font-weight: bold;
                     margin-bottom: 8px;
                 }
 
@@ -79,19 +73,21 @@
                         }
 
                         h3 {
-                            font-size: 1.6rem;
+                            font-size: 1.4rem;
                             margin-bottom: 8px;
 
                             @include sb {
                                 font-size: 2.2rem;
                             }
-                            
+
                             @include tb {
                                 font-size: 1.8rem;
                             }
                         }
 
                         p {
+                            font-size: 1.2rem;
+
                             @include sb {
                                 font-size: 1.6rem;
                             }

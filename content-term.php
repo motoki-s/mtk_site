@@ -7,6 +7,7 @@
         foreach ($terms as $term) {
             $terms = get_the_terms($post->ID, 'genre');
             $slug = $terms[0]->slug;
+            var_dump($slug);
             // echo esc_html($term->name);
             // 3. if文でタクソノミーページの場合 & 現在表示されているページと同じカテゴリーの場合「selected」属性を付与する
             if (is_tax() && $slug == $term->slug) {

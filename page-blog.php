@@ -10,7 +10,7 @@
                 while ($blog_pages->have_posts()) : $blog_pages->the_post();
             ?>
                     <li class="down-to-top">
-                        <p class="blog-date"><?php echo get_post_time('Y.n.j(D)'); ?></p>
+                        <p class="blog-date"><?php echo get_post_time('Y.m.d'); ?></p>
                         <a href="<?php the_permalink(); ?>">
                             <div class="blog-content">
                                 <div class="blog-image" style="background:url(

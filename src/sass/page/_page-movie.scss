@@ -73,61 +73,17 @@
                     padding-top: 80px;
                 }
             }
-            // //サファリ
-            // _:lang(x)+_:-webkit-full-screen-document, .play-wrapper {
-            //     padding-top: 76px;
-            // }
-
 
             .movie-title {
-                // margin-left: 26px;
-                // padding-top: 56px;
                 color: #fff;
                 text-align: center;
-                // background-color: rgba(71, 71, 71, 0.5);
-                // height: 28vh;
-                // padding-top: 20vh;
-                // margin-top: -19vh;
-
-                // @include sb {
-                //     height: 438px;
-                //     padding-top: 267px;
-                //     margin-top: -240px;
-                // }
+                width: 90%;
+                margin: 0 auto;
 
                 @include tb {
-                    // margin-left: 3%;
                     padding-top: 0;
-                    // color: #fff;
-                    // text-align: center;
-                    // height: 28vh;
-                    // padding-top: 20vh;
-                    // margin-top: -19vh;
                 }
             }
-
-            // //サファリ
-            // _:lang(x)+_:-webkit-full-screen-document,
-            // .movie-title {
-            //     height: 32vh;
-            //     padding-top: 168px;
-            //     margin-top: -21vh;
-
-            //     @include sb {
-            //         height: 56vh;
-            //         padding-top: 250px;
-            //         margin-top: -31vh;
-            //     }
-
-
-            //     @include tb {
-
-            //         height: 31vh;
-            //         padding-top: 20vh;
-            //         margin-top: -21vh;
-            //     }
-
-            // }
         }
 
         //--------------------------------------//
@@ -194,12 +150,8 @@
         @include tb {
             display: block;
             margin-top: -160px;
-            // position: relative;
             right: 8vw;
-            // width: 200px;
             position: absolute;
-            // top: 58vh;
-            // flex-direction: column;
         }
 
         li {
@@ -219,36 +171,7 @@
             .term-current {
                 color: $btn-color;
                 border-bottom: 1px solid;
-                // padding-bottom: 4px;
             }
         }
     }
 }
-
-// select {
-//     position: relative;
-//     padding: 10px;
-//     width: 100%;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-// }
-
-// .select-wrap {
-//     position: relative;
-//     width: 100px;
-// }
-
-// .select-wrap:after {
-//     content: "";
-//     position: absolute;
-//     right: 10px;
-//     top: 15px;
-//     width: 10px;
-//     height: 10px;
-//     border-top: 2px solid #ccc;
-//     border-left: 2px solid #ccc;
-//     transform: translateY(-50%) rotate(-135deg);
-//     font-size: 20px;
-//     pointer-events: none;
-// }

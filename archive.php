@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <section class="top-news">
     <div class="container">
-        <!-- <?php $term_obj = get_term_by('slug', 'news', 'category'); ?> -->
         <div class="news-contain">
             <h2 class="down-to-top">NEWS</h2>
             <ul>
@@ -26,7 +25,6 @@
 </section>
 
 <!-- ページネーション -->
-
 <div class="pagenation-wrapper">
     <?php
     $args = array(

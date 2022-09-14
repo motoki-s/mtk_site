@@ -14,7 +14,7 @@
 
     <div id="loading">
         <div id="loading-animation">
-            <img src="<?php echo get_template_directory_uri() ;?>/img/fv-logo-sp-white.png" alt="" class="fadeUp">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fv-logo-sp-white.png" alt="" class="fadeUp">
         </div>
     </div>
     <!--/splash-->
@@ -72,4 +72,9 @@
             <h2 class="fv-title-pc">
                 <?php echo get_main_title_pc(); ?>
             </h2>
+
+            <!-- スクロールダウン -->
+            <?php if (is_front_page()) : ?>
+                <div class="scrolldown4"><span>Scroll</span></div>
+            <?php endif; ?>
         </div>
