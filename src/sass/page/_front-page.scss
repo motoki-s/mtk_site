@@ -73,7 +73,6 @@
     }
 
     ul {
-        // border-top: dashed 1px #ccc;
         margin-bottom: 48px;
 
         @include tb {
@@ -330,16 +329,16 @@
     }
 }
 
-
-
 // live--------------------------------------------------//
 .live {
+    padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #fff;
+    background-color: #F0F8FF;
 
     @include tb {
         padding-top: 80px;
         padding-bottom: 120px;
+        background: #fff;
     }
 
     .live-contain {
@@ -470,7 +469,7 @@
     bottom: -4px;
     padding-top: 20px;
     padding-bottom: 64px;
-    background: #fff;
+    background: #F0F8FF;
     margin-top: -8px;
 
     @include tb {
@@ -522,14 +521,16 @@
             }
 
             .blog-text {
+                padding-top: 8px;
                 span {
                     text-align: left;
                     font-size: 1rem;
                 }
 
                 h3 {
-                    font-weight: bold;
+                    // font-weight: bold;
                     margin-bottom: 8px;
+                    line-height: 1.6;
                 }
 
                 p {
@@ -541,6 +542,7 @@
 
     .blog-slider {
         z-index: 100;
+        margin-top: -20px;
 
         @include tb {
             display: none;
@@ -551,6 +553,7 @@
             box-shadow: 0 0 10px #ccc;
             margin-bottom: 20px;
             padding: 12px;
+            margin-top: 16px;
 
             .blog-text {
                 span {
@@ -577,7 +580,7 @@
         display: block;
         text-align: right;
         margin-right: 40px;
-        transition: all 0.1s;
+        transition: all 1s;
 
         @include tb {
             &:hover {
@@ -594,3 +597,4 @@
         }
     }
 }
+

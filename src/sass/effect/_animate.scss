@@ -8,7 +8,6 @@
     height: 100%;
     z-index: 999;
     transition: all 1s;
-    // background: #fff;
     background: #b4d2e5;
     text-align: center;
     opacity: 1;
@@ -41,8 +40,6 @@
     opacity: 1;
     visibility: visible;
 }
-
-
 
 /* fadeUpをするアイコンの動き */
 .fadeUp {
@@ -78,11 +75,7 @@
     transform: translateY(0);
 }
 
-
-
-
 /*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
-
 /*スクロールダウン全体の場所*/
 .scrolldown4 {
     /*描画位置※位置は適宜調整してください*/

@@ -154,7 +154,6 @@
             @include tb {
                 max-width: 640px;
                 margin: 120px auto 80px;
-                // margin-top: 200px;
             }
 
             .profile-image {
@@ -172,7 +171,6 @@
             }
 
             .profile-text {
-                // width: 300px;
                 flex-basis: 90vw;
                 margin-left: 16px;
 
@@ -224,6 +222,7 @@
     .rel-article {
         padding-top: 80px;
         padding-bottom: 64px;
+        margin: 0 calc(50% - 50vw);
 
         @include tb {
             padding-top: 80px;
@@ -232,6 +231,7 @@
 
         h5 {
             font-size: $title-sp;
+            @include width-sp;
 
             @include tb {
                 margin-left: 0;
@@ -242,6 +242,7 @@
 
         .blog-slider {
             z-index: 100;
+            margin-top: -12px;
 
             @include tb {
                 display: none;
@@ -252,6 +253,7 @@
                 box-shadow: 0 0 10px #ccc;
                 margin-bottom: 20px;
                 padding: 12px;
+                margin-top: 8px;
 
                 .blog-text {
                     span {
@@ -277,6 +279,7 @@
                 display: block;
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 24px;
             }
 
             li {
@@ -294,13 +297,13 @@
                 }
 
                 .blog-text {
+                    padding-top: 8px;
                     span {
                         text-align: left;
                         font-size: 1rem;
                     }
 
                     h3 {
-                        font-weight: bold;
                         line-height: 1.6;
                         margin-bottom: 8px;
                     }
