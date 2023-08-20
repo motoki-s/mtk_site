@@ -134,9 +134,6 @@ function cms_excerpt_length()
 add_filter('excerpt_mblength', 'cms_excerpt_length');
 
 
-
-
-
 // アイキャッチ画像の設定
 add_theme_support('post-thumbnails');
 
@@ -145,22 +142,11 @@ add_theme_support('post-thumbnails');
 
 //各ページのメイン画像用のサイズ設定
 add_image_size('detail', 1100, 330, true);
-
-
-
 add_image_size('movie-sp', 400, 250, true);
 add_image_size('movie-pc', 640, 300, true);
-
-
-
 add_image_size('live', 320, 240, true);
 add_image_size('profile', 600, 400, true);
-
 add_image_size('blog', 420, 340, true);
-
-
-
-
 
 
 //各テンプレートごとのメイン画像を表示
@@ -181,8 +167,6 @@ function get_main_image()
                 ]
             ); //トップページ
         }
-
-
     } elseif (is_archive() || is_singular('post') || is_404()) {
         return '<img src="' . get_template_directory_uri() . '/img/news-fv-pc.jpg" />';
     } elseif (is_singular('live')) {
@@ -204,37 +188,13 @@ add_filter("big_image_size_threshold", "__return_false");
 
 
 
-function image_tag_delete( $html ){
-    $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+function image_tag_delete($html)
+{
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
     return $html;
-    }
-    add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
-    add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
-
-
-
-
-
-
-
-
-// if (!empty(get_header_image()) && is_front_page()) { //フロントページ
-//     $url = get_header_image();
-// } elseif (is_singular('post') || is_archive() || is_page('profile')) { // 投稿ページ、アーカイブページnews プロフィール
-//     $url = get_template_directory_uri() . '/img/news-fv-pc.jpg';
-// } elseif (is_page('movie') || (is_page() && $post->post_parent)) { //親ページと子ページ movie
-//     $url = get_template_directory_uri() . '/img/movie-fv.jpg'; //page-movie
-// } elseif (is_page('live') || (is_singular('live')) || is_page('reservation')) {  //live
-//     $url = get_template_directory_uri() . '/img/live-fv.jpg';
-// } elseif (is_page('blog') || (is_singular('blog'))) {  //blog
-//     $url = get_template_directory_uri() . '/img/blog-fv.jpg';
-// } elseif (is_page('contact')) {
-//     $url = get_template_directory_uri() . '/img/contact-fv.jpg';
-// }
-
-
-
-
+}
+add_filter('image_send_to_editor', 'image_tag_delete', 10);
+add_filter('post_thumbnail_html', 'image_tag_delete', 10);
 
 
 //メイン画像上にテンプレートごとの文字列(タイトル)を表示
@@ -380,3 +340,5 @@ function auto_post_slug($slug, $post_ID, $post_status, $post_type)
     return $slug;
 }
 add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);
+
+

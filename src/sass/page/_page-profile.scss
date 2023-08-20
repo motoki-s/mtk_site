@@ -29,14 +29,14 @@
             @include tb {
                 display: flex;
                 justify-content: space-between;
-                flex-direction: row-reverse;
+                // flex-direction: row-reverse;
             }
 
             .profile-image {
                 padding-bottom: 32px;
 
                 @include tb {
-                    width: 40%;
+                    width: 45%;
                 }
             }
 
@@ -51,7 +51,7 @@
                 }
 
                 @include tb {
-                    width: 55%;
+                    width: 50%;
                 }
             }
         }
