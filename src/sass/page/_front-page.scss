@@ -308,7 +308,7 @@
     z-index: -200;
     width: 100%;
     height: 100vh;
-    background: url(../../img/bg-top-page-4.jpg) center center / cover no-repeat;
+    background: url(../../img/bg-top-page-5.jpg) center center / cover no-repeat;
     filter: blur(2px)brightness(110%);
 
     @include tb {
@@ -336,7 +336,8 @@
 .live {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #F0F8FF;
+    //background-color: #F0F8FF;
+    background-color: rgb(252 251 242);
 
     @include tb {
         padding-top: 80px;
@@ -472,7 +473,8 @@
     bottom: -4px;
     padding-top: 20px;
     padding-bottom: 64px;
-    background: #F0F8FF;
+    //background: #F0F8FF;
+    background-color: rgb(252 251 242);
     margin-top: -8px;
 
     @include tb {

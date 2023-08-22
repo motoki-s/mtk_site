@@ -145,7 +145,7 @@ add_image_size('detail', 1100, 330, true);
 add_image_size('movie-sp', 400, 250, true);
 add_image_size('movie-pc', 640, 300, true);
 add_image_size('live', 320, 240, true);
-add_image_size('profile', 600, 400, true);
+//add_image_size('profile', 600, 400, true);
 add_image_size('blog', 420, 340, true);
 
 
@@ -211,7 +211,7 @@ function get_main_title_sp()
     } elseif (is_singular(['live', 'blog'])) {   //live,blog ページ
         $post_title = $post->post_type; //カスタム投稿タイプ名
         return ucfirst($post_title); //先頭大文字
-    } elseif (is_page('profile') || is_404()) {  //ロゴ表示
+    } elseif (is_page('profile') || is_404() || is_front_page()) {  //ロゴ表示
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp.png" alt="motoki sakuma sp-logo">';
     } else {
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp-white.png" alt="motoki sakuma sp-logo-white">';
