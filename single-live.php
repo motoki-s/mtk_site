@@ -13,7 +13,7 @@
             <h2><?php the_title(); ?></h2>
             <div class="live-wrapper">
                 <div class="live-place">
-                    <div class="live-image"><?php echo the_post_thumbnail('live'); ?></div>
+                    <div class="live-image"><?php echo the_post_thumbnail(''); ?></div>
                     <a href="<?php echo get_field('livehouse_hp')['url']; ?>" target="_blank" rel="noopener noreferrer"><?php echo get_field('livehouse_hp')['title']; ?></a>
                 </div>
                 <div class="live-access">

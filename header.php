@@ -14,11 +14,9 @@
 
     <div id="loading">
         <div id="loading-animation">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/fv-logo-sp-white.png" alt="" class="fadeUp">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/fv-logo-sp.png" alt="" class="fadeUp">
         </div>
     </div>
-    <!--/splash-->
-    <!-- <div class="splashbg"></div> -->
 
     <!---画面遷移用-->
     <div id="container">

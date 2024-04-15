@@ -32,14 +32,13 @@
         ?>
         <?php if ($next_post) : ?>
             <div class="next">
-                <a class="nextpostslink" href="<?php echo get_permalink($next_post->ID); ?>">NEXT</a>
+                <a class="nextpostslink" href="<?php echo get_permalink($next_post->ID); ?>"></a>
             </div>
         <?php endif; ?>
 
-
         <?php if ($prev_post) : ?>
             <div class="prev">
-                <a class="previouspostslink" href="<?php echo get_permalink($prev_post->ID); ?>">PREV</a>
+                <a class="previouspostslink" href="<?php echo get_permalink($prev_post->ID); ?>"></a>
             </div>
         <?php endif; ?>
     </div>
