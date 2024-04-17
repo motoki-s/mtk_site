@@ -96,13 +96,25 @@ textarea {
 }
 
 
-
 //画像とテキストの余白
 .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
     padding: 0;
 }
+
 .wp-block-media-text__media {
     @media (min-width: 601px) {
         padding: 0 8%;
     }
+}
+
+
+.blog-slider {
+    li a {
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        outline: none;
+    }
+} 
+.slick-slide {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
 }

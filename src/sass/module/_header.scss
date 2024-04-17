@@ -9,18 +9,12 @@
     position: fixed;
     width: 100%;
     height: 15vw;
-    // background-color: rgba(255, 255, 255, 1);
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 200;
     transition: 0.5s;
-    // transition: all 0.5s;
 
     &.change {
-        // background: rgba(0, 0, 0, 0.5);
-        // background: rgb(162 207 237 / 90%);
-
         background: $btn-color;
-        // background: #568baec1;
     }
 
     @include tb {
@@ -126,12 +120,7 @@
     height: 100%;
     top: 0;
     right: 0;
-    // background-color: rgba(255, 255, 255, 0.95);
     background-color: #568baef5;
-    // background: rgb(162 207 237 / 95%);
-    // background: rgba(0, 0, 0, 0.9);
-
-
     transition: all 0.3s;
     transform: translate(100%);
     z-index: 1000;
@@ -266,8 +255,6 @@
         top: 30vh;
         right: 60px;
         left: 20px;
-        // max-width: 400px;
-        // margin: 0 auto;
         margin-left: 3vw;
         font-size: $title-sp;
 

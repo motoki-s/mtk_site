@@ -23,7 +23,7 @@
             font-size: $title-sp;
 
             @include tb {
-                font-size: 4rem;
+                font-size: 3.2rem;
             }
         }
 
@@ -142,3 +142,7 @@
     margin-top: -36px;
     margin-bottom: 24px;
 }
+
+// .wpcf7-response-output {
+//     display: none;
+// }

@@ -41,7 +41,6 @@
         display: block;
         background: #fff;
         padding-top: 80px;
-        height: 180px;
 
         @include tb {
             padding-left: 24px;
@@ -50,7 +49,6 @@
 
     @include tb {
         text-align: left;
-        // margin-left: 24px;
         background-color: rgba(255, 255, 255, 0);
     }
 }
@@ -93,6 +91,7 @@
 .page-id-80,
 .error404 {
     .footer small {
+        font-size: 1rem;
         padding-top: 0;
         height: 0;
     }
@@ -110,4 +109,28 @@
     .current {
         padding: 4px 0 0 4px;
     }
+}
+
+//news page
+//movie page
+//live page
+//blog page
+//contact page
+.archive,
+.page-id-93,
+.page-id-78,
+.page-id-80,
+.page-id-206,
+.page-id-241 {
+    .footer {
+        padding-top: 24px;
+        height: 100px;
+    
+        @include tb {
+            padding-top: 40px;
+            height: 140px;
+        }
+
+    }
+
 }

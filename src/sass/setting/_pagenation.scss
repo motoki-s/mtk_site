@@ -196,7 +196,7 @@
         .nextpostslink {
             position: absolute;
             right: 30px;
-            color: rgba(255, 255, 255, 0);
+            color: #fff;
             // width: 80px;
             top: -4px;
             transition: all .3s;
@@ -268,9 +268,33 @@
 
 .single-blog {
     .wp-pagenavi {
+        .next::after {
+            content: "NEXT";
+            position: absolute;
+            right: 64px;
+            z-index: -100;
+
+            @include tb {
+                right: 88px;
+            }
+        }
+
+        .prev::after {
+            content: "PREV";
+            position: absolute;
+            left: 64px;
+            z-index: -100;
+
+            @include tb {
+                left: 88px;
+            }
+        }
+
         .nextpostslink {
             right: 16px;
-            padding: 12px 0;
+            padding: 12px 32px;
+            padding: 20px 56px;
+            top: -12px;
 
             @include tb {
                 right: 28px;
@@ -278,15 +302,14 @@
         }
         .previouspostslink {
             left: 16px;
-            padding: 12px 0;
+            padding: 20px 56px;
+            top: -12px;
 
             @include tb {
                 left: 28px;
             }
         }
     }
-
-
 }
 
 //戻るーーーーーーーーーーーーーーーーーーーーーーー
@@ -295,14 +318,12 @@
 .page {
 
     .more-btn {
-        // display: inline-block;
         color: #fff;
         position: absolute;
         left: 30px;
         margin-top: -12px;
         padding: 20px 28px;
         transition: all .3s;
-        // padding: 12px 0;
 
         &::after {
             content: '';

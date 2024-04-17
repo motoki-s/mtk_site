@@ -24,35 +24,6 @@ register_nav_menus([
 add_theme_support('custom-header');
 
 
-
-
-//固定ページの子ページを取得する関数
-// function get_child_pages($number = -1, $specified_id = null)
-// {
-
-//     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-
-//     if (isset($specified_id)) {
-//         $parent_id = $specified_id;
-//     } else {
-//         $parent_id = get_the_ID();
-//     }
-//     $args = [
-//         'posts_per_page' => $number,
-//         'post_type' => 'page',
-//         'orderby' => 'menu_order',
-//         'order' => 'ASC',
-//         'post_parent' => $parent_id,
-//         'paged' => $paged,
-
-//     ];
-//     $child_pages = new WP_Query($args);
-//     return $child_pages;
-// }
-
-
-
-
 //固定ページの子ページを取得する関数
 function get_child_pages($number = -1, $specified_id = null)
 {
@@ -77,7 +48,6 @@ function get_child_pages($number = -1, $specified_id = null)
     $child_pages = new WP_Query($args);
     return $child_pages;
 }
-
 
 //特定の記事を抽出する関数
 function get_specific_posts($post_type, $taxonomy = null, $term = null, $number = -1, $custom = null, $orderby = null, $meta_query = null)
@@ -118,8 +88,6 @@ function get_specific_posts($post_type, $taxonomy = null, $term = null, $number 
 }
 
 
-
-
 //抜粋のデフォルト文字数を定義
 function cms_excerpt_more()
 {
@@ -134,9 +102,6 @@ function cms_excerpt_length()
 add_filter('excerpt_mblength', 'cms_excerpt_length');
 
 
-
-
-
 // アイキャッチ画像の設定
 add_theme_support('post-thumbnails');
 
@@ -145,22 +110,11 @@ add_theme_support('post-thumbnails');
 
 //各ページのメイン画像用のサイズ設定
 add_image_size('detail', 1100, 330, true);
-
-
-
 add_image_size('movie-sp', 400, 250, true);
 add_image_size('movie-pc', 640, 300, true);
-
-
-
 add_image_size('live', 320, 240, true);
-add_image_size('profile', 600, 400, true);
-
+//add_image_size('profile', 600, 400, true);
 add_image_size('blog', 420, 340, true);
-
-
-
-
 
 
 //各テンプレートごとのメイン画像を表示
@@ -181,8 +135,6 @@ function get_main_image()
                 ]
             ); //トップページ
         }
-
-
     } elseif (is_archive() || is_singular('post') || is_404()) {
         return '<img src="' . get_template_directory_uri() . '/img/news-fv-pc.jpg" />';
     } elseif (is_singular('live')) {
@@ -190,12 +142,7 @@ function get_main_image()
     } elseif (empty(the_post_thumbnail('detail'))) { //アイキャッチ画像がない場合
         return '<img src="https://placehold.jp/30/ccc/ffffff/1400x700.png?text=header+image" />';
     }
-
-    // else {
-    //     return '<img src="https://placehold.jp/30/ccc/ffffff/1400x700.png?text=header+image" />';
-    // }
 }
-
 
 //srcset属性を削除
 add_filter('wp_calculate_image_srcset_meta', '__return_null');
@@ -203,38 +150,13 @@ add_filter('wp_calculate_image_srcset_meta', '__return_null');
 add_filter("big_image_size_threshold", "__return_false");
 
 
-
-function image_tag_delete( $html ){
-    $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+function image_tag_delete($html)
+{
+    $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
     return $html;
-    }
-    add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
-    add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
-
-
-
-
-
-
-
-
-// if (!empty(get_header_image()) && is_front_page()) { //フロントページ
-//     $url = get_header_image();
-// } elseif (is_singular('post') || is_archive() || is_page('profile')) { // 投稿ページ、アーカイブページnews プロフィール
-//     $url = get_template_directory_uri() . '/img/news-fv-pc.jpg';
-// } elseif (is_page('movie') || (is_page() && $post->post_parent)) { //親ページと子ページ movie
-//     $url = get_template_directory_uri() . '/img/movie-fv.jpg'; //page-movie
-// } elseif (is_page('live') || (is_singular('live')) || is_page('reservation')) {  //live
-//     $url = get_template_directory_uri() . '/img/live-fv.jpg';
-// } elseif (is_page('blog') || (is_singular('blog'))) {  //blog
-//     $url = get_template_directory_uri() . '/img/blog-fv.jpg';
-// } elseif (is_page('contact')) {
-//     $url = get_template_directory_uri() . '/img/contact-fv.jpg';
-// }
-
-
-
-
+}
+add_filter('image_send_to_editor', 'image_tag_delete', 10);
+add_filter('post_thumbnail_html', 'image_tag_delete', 10);
 
 
 //メイン画像上にテンプレートごとの文字列(タイトル)を表示
@@ -251,7 +173,7 @@ function get_main_title_sp()
     } elseif (is_singular(['live', 'blog'])) {   //live,blog ページ
         $post_title = $post->post_type; //カスタム投稿タイプ名
         return ucfirst($post_title); //先頭大文字
-    } elseif (is_page('profile') || is_404()) {  //ロゴ表示
+    } elseif (is_page('profile') || is_404() || is_front_page()) {  //ロゴ表示
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp.png" alt="motoki sakuma sp-logo">';
     } else {
         return '<img src="' . get_template_directory_uri() . '/img/fv-logo-sp-white.png" alt="motoki sakuma sp-logo-white">';
@@ -280,9 +202,6 @@ function get_main_title_pc()
 }
 
 
-
-
-
 //yotube埋め込みレスポンシブ化
 function iframe_in_div($the_content)
 {
@@ -293,10 +212,6 @@ function iframe_in_div($the_content)
     return $the_content;
 }
 add_filter('the_content', 'iframe_in_div');
-
-
-
-
 
 
 //カスタム固定ページ送り出来るように　パーマリンクは/%category%/%postname%
@@ -368,9 +283,6 @@ function posts_columns_sort_param($vars)
 add_filter('request', 'posts_columns_sort_param');
 
 
-
-
-
 //URLスラッグの自動生成
 function auto_post_slug($slug, $post_ID, $post_status, $post_type)
 {
@@ -380,3 +292,13 @@ function auto_post_slug($slug, $post_ID, $post_status, $post_type)
     return $slug;
 }
 add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);
+
+
+/* -------------------------------------------------
+Contact Form 7で自動挿入されるPタグ、brタグを削除
+-------------------------------------------------- */
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+    return false;
+}
