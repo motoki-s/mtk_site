@@ -308,7 +308,7 @@
     z-index: -200;
     width: 100%;
     height: 100vh;
-    background: url(../../img/bg-top-page-4.jpg) center center / cover no-repeat;
+    background: url(../../img/bg-top-page-5.jpg) center center / cover no-repeat;
     filter: blur(2px)brightness(110%);
 
     @include tb {
@@ -336,7 +336,12 @@
 .live {
     padding-top: 40px;
     padding-bottom: 40px;
+<<<<<<< HEAD
     background-color: #F0F8FF;
+=======
+    //background-color: #F0F8FF;
+    background-color: rgb(252 251 242);
+>>>>>>> origin/master
 
     @include tb {
         padding-top: 80px;
@@ -472,7 +477,12 @@
     bottom: -4px;
     padding-top: 20px;
     padding-bottom: 64px;
+<<<<<<< HEAD
     background: #F0F8FF;
+=======
+    //background: #F0F8FF;
+    background-color: rgb(252 251 242);
+>>>>>>> origin/master
     margin-top: -8px;
 
     @include tb {
@@ -484,7 +494,9 @@
 
     h2 {
         font-size: $title-sp;
-        padding-bottom: 8px;
+        // padding-bottom: 8px;
+        padding-bottom: 28px;
+
         margin-left: 5%;
 
         @include tb {
@@ -493,11 +505,11 @@
         }
     }
 
-    //サファリ
-    _:lang(x)+_:-webkit-full-screen-document,
-    h2 {
-        padding-bottom: 0px;
-    }
+    // //サファリ
+    // _:lang(x)+_:-webkit-full-screen-document,
+    // h2 {
+    //     padding-bottom: 0px;
+    // }
 
     .blog-list {
         display: none;
