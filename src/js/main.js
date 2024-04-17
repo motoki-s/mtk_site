@@ -115,3 +115,51 @@ $(function () {
     }
     webStorage();
 });
+
+// 送信ローダーの調整
+const submitElement = document.getElementsByClassName('wpcf7-submit');
+const submitValue = submitElement[0].value;
+
+submitElement[0].addEventListener('click', (ev) => {
+    submitElement[0].classList.add('wpcf7-active'); // 指定のクラスを付与する
+    submitElement[0].value = '送信中…'; // 送信中の文言(*1)
+});
+
+document.addEventListener('wpcf7submit', (ev) => { // Ajaxのフォーム送信が完了した場合（成功・失敗問わず）
+    submitElement[0].classList.remove('wpcf7-active'); // 指定のクラスを外す
+    submitElement[0].value = submitValue;
+});
+
+// 送信完了後に表示するテキスト(*1)
+const submitText = 'ありがとうございます。メッセージは送信されました。';
+
+// 送信完了後に表示するリンク(*1)
+const submitLink = '/';
+
+// モーダル要素を作成する
+const modalElement = document.createElement('div');
+modalElement.id = 'wpcf7-modal';
+const modalBg = document.createElement('div');
+modalBg.id = 'wpcf7-modal__bg';
+const modalWrap = document.createElement('div');
+modalWrap.id = 'wpcf7-modal__wrap'
+const modalText = document.createElement('p');
+modalText.appendChild(document.createTextNode(submitText));
+const modalLink = document.createElement('a');
+modalLink.href = submitLink;
+modalLink.appendChild(document.createTextNode('戻る'))
+
+// モーダル要素をDOMツリーに追加する
+modalElement.appendChild(modalBg);
+modalElement.appendChild(modalWrap);
+modalWrap.appendChild(modalText);
+modalWrap.appendChild(modalLink);
+
+// モーダルをbody直下に追加する(*2)
+const bodyElement = document.getElementsByTagName('body');
+bodyElement[0].appendChild(modalElement);
+
+// 送信完了時にモーダルを表示する(*3)
+document.addEventListener('wpcf7mailsent', function(e) {
+    modalElement.style.display = 'flex';
+});

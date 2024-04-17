@@ -184,3 +184,67 @@ form {
         display: block;
     }
 }
+
+/* 送信ローダーの位置調整 */
+.wpcf7 .wpcf7-spinner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.wpcf7-submit-block {
+    position: relative;
+    margin-bottom: 2em; /* 要調整(*1) */
+}
+
+.wpcf7-submit-block input[type='submit'] {
+    min-width: 200px;
+}
+
+/* 送信ローダークリック時 */
+.wpcf7-submit.wpcf7-active {
+    pointer-events: none;
+    opacity: .5;
+}
+
+/* 本来の送信メッセージは非表示にする */
+.wpcf7 form.sent .wpcf7-response-output {
+    display: none;
+}
+
+/* モーダルウィンドウを作成する */
+#wpcf7-modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#wpcf7-modal__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+#wpcf7-modal__wrap {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+        color: #8DACC5;
+    }
+}
