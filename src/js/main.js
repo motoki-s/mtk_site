@@ -131,7 +131,7 @@ document.addEventListener('wpcf7submit', (ev) => { // Ajaxのフォーム送信�
 });
 
 // 送信完了後に表示するテキスト(*1)
-const submitText = 'ありがとうございます。メッセージは送信されました。';
+const submitText = 'ありがとうございます。送信が完了しました。';
 
 // 送信完了後に表示するリンク(*1)
 const submitLink = '/';
